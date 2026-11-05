@@ -1,0 +1,201 @@
+/* =========================================
+   共通（faqページ上書き）
+========================================= */
+
+body {
+    background: url("/images/common/bg_color_sp.jpg") center / auto repeat fixed;
+}
+
+.l-page {
+    padding-top: 100px;
+    background: transparent;
+}
+
+.footer-banners {
+    background: transparent;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        background: url("/images/common/bg_color_pc.jpg") center / cover no-repeat fixed;
+    }
+
+    .l-page {
+        padding-top: 200px;
+    }
+
+}
+
+
+/* =========================================
+   よくある質問
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+.section_content--faq {
+    overflow: visible;
+}
+
+.faq__lead {
+    font-size: min(4.8vw, 18px);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: min(8vw, 30px);
+}
+
+/* リスト */
+
+.faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: min(8vw, 30px);
+    margin: 0;
+}
+
+/* アイテム */
+
+.faq__item {
+    border-radius: 30px 0 0 0;
+    box-shadow: var(--long-card-shadow);
+}
+
+/* 質問 */
+
+.faq__question {
+    display: flex;
+    align-items: center;
+    gap: min(4vw, 15px);
+    width: 100%;
+    padding: min(3.4666666667vw, 13px) min(5.3333333333vw, 20px);
+    background: var(--dark-blue-color);
+    color: #fff;
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: 500;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px 0 0 0;
+}
+
+.faq__question-icon,
+.faq__answer-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(5.3333333333vw, 20px);
+    height: min(5.3333333333vw, 20px);
+    border-radius: 50%;
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.4;
+}
+
+.faq__question-icon {
+    background: #fff;
+    color: var(--dark-blue-color);
+}
+
+.faq__question-text {
+    flex: 1;
+}
+
+.faq__arrow {
+    flex-shrink: 0;
+    width: 7px;
+    height: auto;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.faq__question[aria-expanded="true"] .faq__arrow {
+    transform: rotate(-90deg);
+}
+
+/* 回答 */
+
+.faq__answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background: #fff;
+}
+
+.faq__answer__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: min(4vw, 15px);
+    padding: min(5.3333333333vw, 20px);
+}
+
+.faq__answer-icon {
+    background: var(--dark-blue-color);
+    color: #fff;
+}
+
+.faq__answer-text {
+    flex: 1;
+    font-size: min(3.7333333333vw, 14px);
+    line-height: 1.8;
+}
+
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .faq__lead {
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        margin-bottom: min(3.125vw, 60px);
+    }
+
+    .faq__list {
+        width: min(62.5vw, 1200px);
+        margin: 0 auto;
+        gap: min(3.125vw, 60px);
+    }
+
+    .faq__item {
+        border-radius: 60px 0 0 0;
+    }
+
+    .faq__question {
+        border-radius: 60px 0 0 0;
+    }
+
+    .faq__question {
+        padding: min(1.5625vw, 30px) min(2.6041666667vw, 50px) min(1.5625vw, 30px) min(4.4791666667vw, 86px);
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+        gap: min(1.0416666667vw, 20px);
+    }
+
+    .faq__question-icon,
+    .faq__answer-icon {
+        width: clamp(1.25rem, 0.583rem + 1.39vw, 2.25rem);
+        height: clamp(1.25rem, 0.583rem + 1.39vw, 2.25rem);
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+    }
+
+    .faq__arrow {
+        width: min(0.5208333333vw, 10px);
+    }
+
+    .faq__answer__inner {
+        padding: min(1.5625vw, 30px) min(8.59375vw, 165px) min(1.5625vw, 30px) min(4.4791666667vw, 86px);
+        gap: min(1.0416666667vw, 20px);
+    }
+
+    .faq__answer-text {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+}

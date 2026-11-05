@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/team.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <title>社員紹介</title>
+</head>
+
+<body>
+    <header class="l-header">
+        <div class="header__inner">
+            <!-- ロゴ -->
+            <a href="/#top" class="header__logo">
+                <img src="images/common/header_logo.png" alt="佐藤電設工業株式会社">
+                <span class="header__logo-name">佐藤電設工業</span>
+            </a>
+            <!-- PC ナビ -->
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="/#top" class="header__nav-link">TOP</a></li>
+                    <li><a href="/about-us.html" class="header__nav-link">私たちについて</a></li>
+                    <li><a href="/construction.html" class="header__nav-link">高圧工事とは</a></li>
+                    <li><a href="/work-list.html" class="header__nav-link">施工実績</a></li>
+                    <li><a href="/process.html" class="header__nav-link">ご依頼の流れ</a></li>
+                    <li><a href="/team-list.html" class="header__nav-link">社員紹介</a></li>
+                    <li><a href="/faq.html" class="header__nav-link">よくある質問</a></li>
+                </ul>
+            </nav>
+            <!-- RECRUIT / CONTACT ボタン -->
+            <ul class="header__btns">
+                <li>
+                    <a href="/recruit-list.html" class="header__btn header__btn--recruit">
+                        <img src="images/common/recruit_icon.svg" alt="" aria-hidden="true">
+                        <span>RECRUIT</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact.html" class="header__btn header__btn--contact">
+                        <img src="images/common/contact.svg" alt="" aria-hidden="true">
+                        <span>CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- SP ハンバーガーボタン -->
+            <button class="header__hamburger" id="btn_spmenu" aria-label="メニューを開く" aria-expanded="false"
+                aria-controls="sp-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP メニュー -->
+    <div class="sp-menu" id="sp-menu" role="dialog" aria-label="メニュー" aria-hidden="true">
+        <div class="sp-menu__inner">
+            <!-- ヘッダー行 -->
+            <div class="sp-menu__head">
+                <a href="/#top" class="sp-menu__logo">
+                    <img src="images/common/header_logo.png" alt="佐藤電設工業株式会社">
+                    <span>佐藤電設工業</span>
+                </a>
+                <button class="sp-menu__close" id="btn_spmenu_close" aria-label="メニューを閉じる">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- ナビ＋サブ -->
+            <div class="sp-menu__body">
+                <!-- ナビ 2カラム -->
+                <nav class="sp-menu__nav">
+                    <ul class="sp-menu__nav-list">
+                        <li>
+                            <a href="/about-us.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">ABOUT</span>
+                                <span class="sp-menu__nav-ja">私たちについて</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/construction.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">HIGH-VOLTAGE<br>CONSTRUCTION</span>
+                                <span class="sp-menu__nav-ja">高圧工事とは</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/work-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">WORK</span>
+                                <span class="sp-menu__nav-ja">施工実績</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/process.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">PROCESS</span>
+                                <span class="sp-menu__nav-ja">ご依頼の流れ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/team-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">OUR TEAM</span>
+                                <span class="sp-menu__nav-ja">社員紹介</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/recruit-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">RECRUIT</span>
+                                <span class="sp-menu__nav-ja">採用情報</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/faq.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">FAQ</span>
+                                <span class="sp-menu__nav-ja">よくある質問</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">CONTACT</span>
+                                <span class="sp-menu__nav-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- サブリンク -->
+                <ul class="sp-menu__sub">
+                    <li><a href="/site-map.html" class="sp-menu__sub-link">— サイトマップ</a></li>
+                    <li><a href="/privacy.html" class="sp-menu__sub-link">— プライバシーポリシー</a></li>
+                </ul>
+            </div><!-- /.sp-menu__body -->
+            <!-- 縦書きデコテキスト -->
+            <p class="sp-menu__deco-text" aria-hidden="true">
+                <span>SATO ELECTRICAL</span>
+                <span class="sp-menu__deco-text--construction">CONSTRUCTION</span>
+            </p>
+        </div>
+    </div>
+    <!-- オーバーレイ -->
+    <div class="sp-menu__overlay" id="sp-menu-overlay"></div>
+    <!-- メインコンテンツ -->
+    <main class="l-main">
+        <div class="l-page">
+            <!-- メインビジュアル -->
+            <div class="lower-fv">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/team/mv_pc.jpg">
+                    <img src="images/team/mv_sp.jpg" alt="社員紹介" class="fv__bg">
+                </picture>
+            </div>
+
+            <div class="lower-fv-deco" id="fv-deco" aria-hidden="true"></div>
+
+            <!-- ページタイトル＋コンテンツ -->
+            <section class="section_content--intro fadeInUp">
+                <div class="section_space">
+                    <div class="about-intro__inner">
+                        <!-- テキストエリア -->
+                        <div class="about-intro__text-area">
+                            <h1 class="lower-page-title">
+                                <span class="lower-page-title-en">OUR TEAM</span>
+                                <span class="lower-page-title-ja">社員紹介</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 社員リスト -->
+            <section class="section_content--team fadeInUp">
+                <div class="section_space">
+                    <h2 class="sr-only">社員リスト</h2>
+                    <ul class="team-card__list">
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="team-card">
+                            <a href="/team-detail.html" class="team-card__link">
+                                <div class="team-card__img-wrap">
+                                    <img src="images/team/team-sample-img.jpg" alt="山田 太郎" class="team-card__img">
+                                </div>
+                                <div class="team-card__body">
+                                    <p class="team-card__name">山田 太郎</p>
+                                    <p class="team-card__dept">配属部署名</p>
+                                    <p class="team-card__year">2000年入社</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+        <!-- CONTACT / FAQ バナー -->
+        <div class="footer-banners fadeInUp">
+            <div class="section_space">
+                <ul class="footer-banners__list">
+                    <li class="footer-banners__item">
+                        <div class="footer-banner footer-banner--contact">
+                            <div class="footer-banner__body">
+                                <div class="footer-banner__title">
+                                    <p class="footer-banner__en">CONTACT</p>
+                                    <p class="footer-banner__ja">お問い合わせ</p>
+                                </div>
+                                <a href="/contact.html" class="c-btn is-white">お問い合わせ <img class="c-btn__arrow"
+                                        src="images/common/cp_arrow-blue.png" alt="" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-banners__item">
+                        <div class="footer-banner footer-banner--faq">
+                            <div class="footer-banner__body">
+                                <div class="footer-banner__title">
+                                    <p class="footer-banner__en">FAQ</p>
+                                    <p class="footer-banner__ja">よくある質問</p>
+                                </div>
+                                <a href="/faq.html" class="c-btn is-white">詳しく見る <img class="c-btn__arrow"
+                                        src="images/common/cp_arrow-blue.png" alt="" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__inner">
+            <div class="footer__body">
+                <!-- ロゴ・会社情報 -->
+                <div class="footer__info">
+                    <a href="/#top" class="footer__logo">
+                        <img src="images/common/footer_logo.png" alt="佐藤電設工業株式会社">
+                        <span>佐藤電設工業</span>
+                    </a>
+                    <address class="footer__address">
+                        <p>〒000-00000<br class="sp_in">○○県○○市○○○○</p>
+                        <p><a href="tel:000-000-0000">Tel：000-000-0000</a><br><span class="not-link"><a
+                                    href="tel:000-000-0000">Fax：000-000-0000</a></span></p>
+                    </address>
+                </div>
+                <!-- PCナビ -->
+                <nav class="footer__nav">
+                    <ul class="footer__nav-col">
+                        <li><a href="/#top" class="footer__nav-link">TOP</a></li>
+                        <li><a href="/about-us.html" class="footer__nav-link">私たちについて</a></li>
+                        <li><a href="/construction.html" class="footer__nav-link">高圧工事とは</a></li>
+                        <li><a href="/work-list.html" class="footer__nav-link">施工実績</a></li>
+                    </ul>
+                    <ul class="footer__nav-col">
+                        <li><a href="/process.html" class="footer__nav-link">ご依頼の流れ</a></li>
+                        <li><a href="/team-list.html" class="footer__nav-link">社員紹介</a></li>
+                        <li><a href="/recruit-list.html" class="footer__nav-link">採用情報</a></li>
+                        <li><a href="/contact.html" class="footer__nav-link">お問い合わせ</a></li>
+                    </ul>
+                    <ul class="footer__nav-col">
+                        <li><a href="/faq.html" class="footer__nav-link">よくある質問</a></li>
+                        <li><a href="/site-map.html" class="footer__nav-link">サイトマップ</a></li>
+                        <li><a href="/privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__copyright">© Sato electrical construction All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ページトップ -->
+    <button class="page-top" id="page-top" aria-label="ページトップへ"></button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+/* =========================================
+   共通
+========================================= */
+
+body {
+    background: url("/images/common/bg_color_sp.jpg") center top / 100% auto repeat-y fixed;
+}
+
+.l-page {
+    padding-top: 100px;
+    background: transparent;
+}
+
+.footer-banners {
+    background: transparent;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        background-image: url("/images/common/bg_color_pc.jpg");
+    }
+
+    .l-page {
+        padding-top: 200px;
+    }
+
+}
+
+/* =========================================
+   プライバシーポリシー
+========================================= */
+
+.privacy__lead,
+.privacy__text,
+.privacy__contact-text,
+.privacy__list li {
+    font-size: min(4.2666666667vw, 1rem);
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+}
+
+.privacy__lead {
+    margin-bottom: min(8vw, 30px);
+}
+
+.privacy__block {
+    margin-bottom: min(8vw, 30px);
+}
+
+.privacy__heading,
+.privacy__contact-name {
+    font-size: min(5.3333333333vw, 1.25rem);
+    font-weight: 600;
+    color: var(--dark-blue-color);
+    line-height: 1.5;
+    margin-bottom: min(4vw, 15px);
+}
+
+.privacy__contact-name {
+    color: var(--text-color);
+}
+
+.privacy__list {
+    list-style: none;
+    margin-top: min(2.6666666667vw, 10px);
+}
+
+.privacy__list li {
+    color: var(--text-color);
+    padding-left: 1em;
+    position: relative;
+}
+
+.privacy__list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+}
+
+.privacy__contact {
+    margin-top: min(10.6666666667vw, 40px);
+    font-style: normal;
+}
+
+/* =========================================
+   PC
+========================================= */
+
+@media (min-width: 768px) {
+
+    .privacy {
+        width: min(62.5vw, 1200px);
+        margin: 0 auto;
+    }
+
+    .privacy__lead,
+    .privacy__text,
+    .privacy__contact-text,
+    .privacy__list li {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .privacy__lead {
+        margin-bottom: min(2.6041666667vw, 50px);
+    }
+
+    .privacy__block {
+        margin-bottom: min(2.0833333333vw, 40px);
+    }
+
+    .privacy__heading,
+    .privacy__contact-name {
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+        margin-bottom: min(0.78125vw, 15px);
+    }
+
+    .privacy__text {
+        letter-spacing: 0;
+        padding-left: min(1.3020833333vw, 25px);
+    }
+
+    .privacy__list li {
+        padding-left: 3em;
+    }
+
+    .privacy__list li::before {
+        left: min(1.3020833333vw, 25px);
+    }
+
+    .privacy__contact {
+        margin-top: min(3.125vw, 60px);
+        font-style: normal;
+    }
+
+
+    .privacy__contact-name {
+        letter-spacing: 0;
+    }
+
+}

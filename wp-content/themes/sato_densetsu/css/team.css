@@ -1,0 +1,406 @@
+/* =========================================
+   社員紹介リスト
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+.section_content--team {
+    overflow: visible;
+}
+
+/* グリッド */
+
+.team-card__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 min(4vw, 15px);
+    list-style: none;
+    margin: 0;
+    counter-reset: team-counter;
+}
+
+/* カード */
+
+.team-card {
+    height: min(65.8666666667vw, 247px);
+    min-width: 0;
+    position: relative;
+    background: #fff;
+    border-radius: 10px 0 0 0;
+    box-shadow: var(--card-shadow);
+    counter-increment: team-counter;
+}
+
+.team-card:nth-child(even) {
+    margin-top: 30px;
+}
+
+.team-card__link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    padding: min(4vw, 15px);
+    transition: opacity 0.3s;
+}
+
+.team-card::before {
+    content: counter(team-counter, decimal-leading-zero);
+    position: absolute;
+    top: min(1.3333333333vw, 5px);
+    left: min(2.1333333333vw, 8px);
+    font-family: var(--en-font);
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: 500;
+    color: var(--dark-blue-color);
+    line-height: 1;
+}
+
+.team-card__img-wrap {
+    width: min(32.8vw, 123px);
+    height: min(32.8vw, 123px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto min(4vw, 15px);
+}
+
+.team-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-card__name {
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: bold;
+    color: var(--dark-blue-color);
+    text-align: center;
+    margin-bottom: min(2.6666666667vw, 10px);
+    padding-bottom: min(1.3333333333vw, 5px);
+    border-bottom: 1px solid var(--dark-blue-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.team-card__dept,
+.team-card__year {
+    font-size: min(3.7333333333vw, 0.875rem);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.team-card__dept {
+    margin-bottom: min(1.3333333333vw, 5px);
+}
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .section_content--team {
+        padding-bottom: min(4.1666666667vw, 80px);
+    }
+
+    /* グリッド */
+
+    .team-card__list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 min(2.6041666667vw, 50px);
+        width: min(67.7083333333vw, 1300px);
+        margin: 0 auto;
+    }
+
+    /* カード */
+
+    .team-card {
+        border-radius: 20px 0 0 0;
+        width: min(15vw, 288px);
+        height: min(20.46875vw, 393px);
+        min-height: 200px;
+    }
+
+    .team-card:nth-child(4n+2),
+    .team-card:nth-child(4n+3),
+    .team-card:nth-child(4n+4) {
+        margin-bottom: max(-80px, -4.1666666667vw);
+    }
+
+    .team-card:nth-child(4n+2) {
+        margin-top: min(3.125vw, 60px);
+    }
+
+    .team-card:nth-child(4n+3) {
+        margin-top: min(6.25vw, 120px);
+    }
+
+    .team-card:nth-child(4n+4) {
+        margin-top: min(9.375vw, 180px);
+    }
+
+    .team-card::before {
+        top: min(0.78125vw, 15px);
+        left: min(0.78125vw, 15px);
+        font-size: clamp(1.125rem, 1.25vw, 1.5rem);
+    }
+
+    .team-card__link {
+        padding: min(1.0416666667vw, 20px) min(1.5625vw, 30px);
+    }
+
+    .team-card__link:hover {
+        opacity: 0.7;
+    }
+
+    .team-card__img-wrap {
+        width: min(11.5625vw, 222px);
+        height: min(11.5625vw, 222px);
+        margin: 0 auto min(1.0416666667vw, 20px);
+    }
+
+    .team-card__name {
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+        margin-bottom: min(1.0416666667vw, 20px);
+        padding-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .team-card__dept,
+    .team-card__year {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .team-card__dept {
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+
+}
+
+
+/* =========================================
+   社員紹介 詳細
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+/* 情報 */
+
+.team-detail__head {
+    padding-bottom: min(4vw, 15px);
+    margin-bottom: min(6.6666666667vw, 25px);
+    border-bottom: 1px solid #0054AC;
+}
+
+.team-detail__badge {
+    display: inline-block;
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 500;
+    color: #fff;
+    font-family: var(--en-font);
+    margin-bottom: min(2.6666666667vw, 10px);
+    border-radius: 4px 0 0 0;
+    background: var(--dark-blue-color);
+    padding: min(1.3333333333vw, 5px) min(2.6666666667vw, 10px);
+}
+
+.team-detail__title {
+    font-size: min(5.3333333333vw, 1.25rem);
+    font-weight: bold;
+    color: var(--dark-blue-color);
+    line-height: 2;
+    margin-bottom: min(2.1333333333vw, 8px);
+}
+
+.team-detail__title span {
+    font-size: min(3.7333333333vw, 0.875rem);
+    margin-left: 3px;
+}
+
+.team-detail__meta {
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-detail__dept,
+.team-detail__sep,
+.team-detail__year {
+    display: inline;
+}
+
+/* コンテンツブロック */
+
+.detail__content-block {
+    display: flex;
+    flex-direction: column;
+    gap: min(5.3333333333vw, 20px);
+    margin-bottom: min(13.3333333333vw, 50px);
+}
+
+.detail__figure {
+    margin-bottom: min(5.3333333333vw, 20px);
+}
+
+.detail__figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 335 / 205;
+    object-fit: cover;
+}
+
+.detail__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: min(4vw, 15px);
+    list-style: none;
+    margin: 0 0 min(5.3333333333vw, 20px);
+    padding: 0;
+}
+
+.detail__gallery li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 7.5px);
+    margin: 0 auto;
+}
+
+.detail__gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 156 / 115;
+    object-fit: cover;
+}
+
+.detail__text {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    padding: 0 min(4vw, 15px);
+}
+
+/* 一覧へ戻るボタン */
+
+.detail__back-link {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: min(2.6666666667vw, 10px) min(8vw, 30px);
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 600;
+    color: #0054AC;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border: 1px solid #0054AC;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 180px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.detail__back-arrow {
+    position: absolute;
+    left: min(5.3333333333vw, 20px);
+    width: min(1.6vw, 6px);
+    height: auto;
+    transform: rotate(180deg);
+    transition: filter 0.3s;
+}
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .section_content--team-detail {
+        padding: 0 min(1.0416666667vw, 20px);
+    }
+
+    .detail {
+        width: min(57.2916666667vw, 1100px);
+        margin: 0 auto;
+    }
+
+    .team-detail__head {
+        padding-bottom: min(1.5625vw, 30px);
+        margin-bottom: min(3.125vw, 60px);
+    }
+
+    .team-detail__badge {
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+        padding: min(0.15625vw, 3px) min(0.8333333333vw, 16px);
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .team-detail__title {
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        line-height: 1.65;
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .team-detail__meta {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .detail__content-block {
+        gap: min(3.125vw, 60px);
+        padding: 0 min(4.4791666667vw, 86px);
+        margin-bottom: min(4.1666666667vw, 80px);
+    }
+
+    .detail__figure {
+        margin-bottom: min(1.5625vw, 30px);
+    }
+
+    .detail__gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: min(1.5625vw, 30px);
+        margin-bottom: min(1.5625vw, 30px);
+    }
+
+    .detail__gallery li:last-child:nth-child(odd) {
+        grid-column: auto;
+        max-width: none;
+        width: 100%;
+    }
+
+    .detail__text {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        padding: 0;
+    }
+
+    .detail__back-link {
+        padding: min(1.3020833333vw, 25px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        gap: min(0.5208333333vw, 10px);
+        max-width: 350px;
+    }
+
+    .detail__back-arrow {
+        left: min(1.3020833333vw, 25px);
+        width: min(0.5208333333vw, 10px);
+    }
+
+    .detail__back-link:hover {
+        background: #0054AC;
+        color: #fff;
+        border-color: #0054AC;
+    }
+
+    .detail__back-link:hover .detail__back-arrow {
+        filter: brightness(0) invert(1);
+    }
+
+}

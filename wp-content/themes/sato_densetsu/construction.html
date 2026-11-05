@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/construction.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <title>高圧工事とは</title>
+</head>
+
+<body>
+    <header class="l-header">
+        <div class="header__inner">
+            <!-- ロゴ -->
+            <a href="/#top" class="header__logo">
+                <img src="images/common/header_logo.png" alt="佐藤電設工業株式会社">
+                <span class="header__logo-name">佐藤電設工業</span>
+            </a>
+            <!-- PC ナビ -->
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="/#top" class="header__nav-link">TOP</a></li>
+                    <li><a href="/about-us.html" class="header__nav-link">私たちについて</a></li>
+                    <li><a href="/construction.html" class="header__nav-link">高圧工事とは</a></li>
+                    <li><a href="/work-list.html" class="header__nav-link">施工実績</a></li>
+                    <li><a href="/process.html" class="header__nav-link">ご依頼の流れ</a></li>
+                    <li><a href="/team-list.html" class="header__nav-link">社員紹介</a></li>
+                    <li><a href="/faq.html" class="header__nav-link">よくある質問</a></li>
+                </ul>
+            </nav>
+            <!-- RECRUIT / CONTACT ボタン -->
+            <ul class="header__btns">
+                <li>
+                    <a href="/recruit-list.html" class="header__btn header__btn--recruit">
+                        <img src="images/common/recruit_icon.svg" alt="" aria-hidden="true">
+                        <span>RECRUIT</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact.html" class="header__btn header__btn--contact">
+                        <img src="images/common/contact.svg" alt="" aria-hidden="true">
+                        <span>CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- SP ハンバーガーボタン -->
+            <button class="header__hamburger" id="btn_spmenu" aria-label="メニューを開く" aria-expanded="false"
+                aria-controls="sp-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP メニュー -->
+    <div class="sp-menu" id="sp-menu" role="dialog" aria-label="メニュー" aria-hidden="true">
+        <div class="sp-menu__inner">
+            <!-- ヘッダー行 -->
+            <div class="sp-menu__head">
+                <a href="/#top" class="sp-menu__logo">
+                    <img src="images/common/header_logo.png" alt="佐藤電設工業株式会社">
+                    <span>佐藤電設工業</span>
+                </a>
+                <button class="sp-menu__close" id="btn_spmenu_close" aria-label="メニューを閉じる">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- ナビ＋サブ -->
+            <div class="sp-menu__body">
+                <!-- ナビ 2カラム -->
+                <nav class="sp-menu__nav">
+                    <ul class="sp-menu__nav-list">
+                        <li>
+                            <a href="/about-us.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">ABOUT</span>
+                                <span class="sp-menu__nav-ja">私たちについて</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/construction.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">HIGH-VOLTAGE<br>CONSTRUCTION</span>
+                                <span class="sp-menu__nav-ja">高圧工事とは</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/work-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">WORK</span>
+                                <span class="sp-menu__nav-ja">施工実績</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/process.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">PROCESS</span>
+                                <span class="sp-menu__nav-ja">ご依頼の流れ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/team-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">OUR TEAM</span>
+                                <span class="sp-menu__nav-ja">社員紹介</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/recruit-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">RECRUIT</span>
+                                <span class="sp-menu__nav-ja">採用情報</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/faq.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">FAQ</span>
+                                <span class="sp-menu__nav-ja">よくある質問</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">CONTACT</span>
+                                <span class="sp-menu__nav-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- サブリンク -->
+                <ul class="sp-menu__sub">
+                    <li><a href="/site-map.html" class="sp-menu__sub-link">— サイトマップ</a></li>
+                    <li><a href="/privacy.html" class="sp-menu__sub-link">— プライバシーポリシー</a></li>
+                </ul>
+            </div><!-- /.sp-menu__body -->
+            <!-- 縦書きデコテキスト -->
+            <p class="sp-menu__deco-text" aria-hidden="true">
+                <span>SATO ELECTRICAL</span>
+                <span class="sp-menu__deco-text--construction">CONSTRUCTION</span>
+            </p>
+        </div>
+    </div>
+    <!-- オーバーレイ -->
+    <div class="sp-menu__overlay" id="sp-menu-overlay"></div>
+    <!-- メインコンテンツ -->
+    <main class="l-main">
+        <div class="l-page">
+            <!-- メインビジュアル -->
+            <div class="lower-fv">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/construction/mv_pc.jpg">
+                    <img src="images/construction/mv_sp.jpg" alt="高圧工事" class="fv__bg">
+                </picture>
+            </div>
+
+            <div class="lower-fv-deco" id="fv-deco" aria-hidden="true"></div>
+
+            <!-- ページタイトル -->
+            <section class="section_content--intro fadeInUp">
+                <div class="section_space">
+                    <div class="about-intro__inner">
+                        <!-- テキストエリア -->
+                        <div class="about-intro__text-area">
+                            <h1 class="lower-page-title">
+                                <span class="lower-page-title-en">HIGH-VOLTAGE<br>CONSTRUCTION</span>
+                                <span class="lower-page-title-ja">高圧工事とは</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 高圧工事とは コンテンツ -->
+            <section class="section_content--construction-intro">
+                <div class="section_space">
+                    <div class="construction-intro__inner">
+                        <!-- テキスト -->
+                        <div class="construction-intro__text-area fadeInUp">
+                            <h2 class="construction-intro__catch">
+                                <em>高圧受電の未来</em>を、確かな技術で創り<em>安全・効率・信頼</em>でつなぐ<em>電力技術</em>
+                            </h2>
+                            <p class="construction-intro__desc">
+                                高圧工事とは、工場や商業施設、ビルなどの大規模な建物で、安全に電力を使えるようにするための工事です。電力会社から供給される高圧電力を適正に電圧に変換する受変電設備（キューピクルなど）の設備をはじめ、ケーブル施設や保守・点検まで行います。
+                            </p>
+                        </div>
+                        <!-- 画像エリア -->
+                        <div class="construction-intro__img-area">
+                            <div class="construction-intro__img-main">
+                                <picture>
+                                    <source media="(min-width: 768px)"
+                                        srcset="images/construction/construction-img-main-pc.png">
+                                    <img src="images/construction/construction-img-main-sp.png" alt="屋外に設置された変電設備">
+                                </picture>
+                            </div>
+                            <div class="construction-intro__img-sub-01">
+                                <img src="images/construction/construction-img-sub-01.jpg" alt="高圧ケーブルの配線">
+                            </div>
+                            <div class="construction-intro__img-sub-02 pc_in">
+                                <img src="images/construction/construction-img-sub-02.jpg" alt="高圧受電設備の配線接続部">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 高圧工事の魅力・危険性 -->
+            <section class="section_content--features-detail">
+                <div class="section_space">
+                    <h2 class="sr-only">高圧工事の特徴</h2>
+                    <ul class="features-detail__list">
+
+                        <!-- 魅力 -->
+                        <li class="features-detail__item">
+                            <div class="features-detail__text-area fadeInUp">
+                                <p class="features-detail__badge">高圧工事の魅力</p>
+                                <h3 class="features-detail__catch">目に見えない<em>エネルギー</em>を、<br>安全な形に変えて<em>街へ届ける。</em>
+                                </h3>
+                                <p class="features-detail__desc">
+                                    巨大な電力をコントロールし、大規模施設や工場へ息吹を吹き込む高圧工事。自分の手がけた仕事が、街の大きな経済活動や人々の暮らしを支えているという実感は、この仕事ならではの醍醐味です。
+                                </p>
+                            </div>
+                            <div class="features-detail__img-area curtain-reveal">
+                                <picture>
+                                    <source media="(min-width: 768px)"
+                                        srcset="images/construction/features-charm_img-pc.png">
+                                    <img src="images/construction/features-charm_img-sp.png" alt="高圧工事の魅力">
+                                </picture>
+                            </div>
+                        </li>
+
+                        <!-- 危険性 -->
+                        <li class="features-detail__item">
+                            <div class="features-detail__text-area fadeInUp">
+                                <p class="features-detail__badge">高圧工事の危険性</p>
+                                <h3 class="features-detail__catch">「<em>命を守る</em>」ための厳格なルール。</h3>
+                                <p class="features-detail__desc">
+                                    高圧工事は一歩間違えれば重大な事故につながります。だからこそ、私たちは徹底した安全教育を行い、一切の妥協を許しません。危険を正しく理解し、恐怖心ではなく「敬意」を持って電気に向き合う。それがプロの技術者の姿です。
+                                </p>
+                            </div>
+                            <div class="features-detail__img-area curtain-reveal">
+                                <picture>
+                                    <source media="(min-width: 768px)"
+                                        srcset="images/construction/features-danger_img-pc.png">
+                                    <img src="images/construction/features-danger_img-sp.png" alt="高圧工事の危険性">
+                                </picture>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+        <!-- CONTACT / FAQ バナー -->
+        <div class="footer-banners fadeInUp">
+            <div class="section_space">
+                <ul class="footer-banners__list">
+                    <li class="footer-banners__item">
+                        <div class="footer-banner footer-banner--contact">
+                            <div class="footer-banner__body">
+                                <div class="footer-banner__title">
+                                    <p class="footer-banner__en">CONTACT</p>
+                                    <p class="footer-banner__ja">お問い合わせ</p>
+                                </div>
+                                <a href="/contact.html" class="c-btn is-white">お問い合わせ <img class="c-btn__arrow"
+                                        src="images/common/cp_arrow-blue.png" alt="" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-banners__item">
+                        <div class="footer-banner footer-banner--faq">
+                            <div class="footer-banner__body">
+                                <div class="footer-banner__title">
+                                    <p class="footer-banner__en">FAQ</p>
+                                    <p class="footer-banner__ja">よくある質問</p>
+                                </div>
+                                <a href="/faq.html" class="c-btn is-white">詳しく見る <img class="c-btn__arrow"
+                                        src="images/common/cp_arrow-blue.png" alt="" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__inner">
+            <div class="footer__body">
+                <!-- ロゴ・会社情報 -->
+                <div class="footer__info">
+                    <a href="/#top" class="footer__logo">
+                        <img src="images/common/footer_logo.png" alt="佐藤電設工業株式会社">
+                        <span>佐藤電設工業</span>
+                    </a>
+                    <address class="footer__address">
+                        <p>〒000-00000<br class="sp_in">○○県○○市○○○○</p>
+                        <p><a href="tel:000-000-0000">Tel：000-000-0000</a><br><span class="not-link"><a
+                                    href="tel:000-000-0000">Fax：000-000-0000</a></span></p>
+                    </address>
+                </div>
+                <!-- PCナビ -->
+                <nav class="footer__nav">
+                    <ul class="footer__nav-col">
+                        <li><a href="/#top" class="footer__nav-link">TOP</a></li>
+                        <li><a href="/about-us.html" class="footer__nav-link">私たちについて</a></li>
+                        <li><a href="/construction.html" class="footer__nav-link">高圧工事とは</a></li>
+                        <li><a href="/work-list.html" class="footer__nav-link">施工実績</a></li>
+                    </ul>
+                    <ul class="footer__nav-col">
+                        <li><a href="/process.html" class="footer__nav-link">ご依頼の流れ</a></li>
+                        <li><a href="/team-list.html" class="footer__nav-link">社員紹介</a></li>
+                        <li><a href="/recruit-list.html" class="footer__nav-link">採用情報</a></li>
+                        <li><a href="/contact.html" class="footer__nav-link">お問い合わせ</a></li>
+                    </ul>
+                    <ul class="footer__nav-col">
+                        <li><a href="/faq.html" class="footer__nav-link">よくある質問</a></li>
+                        <li><a href="/site-map.html" class="footer__nav-link">サイトマップ</a></li>
+                        <li><a href="/privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__copyright">© Sato electrical construction All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ページトップ -->
+    <button class="page-top" id="page-top" aria-label="ページトップへ"></button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

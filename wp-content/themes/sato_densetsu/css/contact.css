@@ -1,0 +1,278 @@
+/* =========================================
+   共通
+========================================= */
+
+body {
+    background: url("/images/common/bg_color_sp.jpg") center top / 100% auto repeat-y fixed;
+}
+
+.l-page {
+    padding-top: 100px;
+    background: transparent;
+}
+
+.footer-banners {
+    background: transparent;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        background-image: url("/images/common/bg_color_pc.jpg");
+    }
+
+    .l-page {
+        padding-top: 200px;
+    }
+
+}
+
+/* =========================================
+   お問い合わせ
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+/* フォーム */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: min(5.3333333333vw, 20px);
+}
+
+/* グループ */
+
+.contact-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: min(2.6666666667vw, 10px);
+}
+
+/* ラベル */
+
+.contact-form__label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: min(2.6666666667vw, 10px);
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: 500;
+}
+
+.contact-form__note {
+    font-size: min(3.2vw, 0.75rem);
+    font-weight: 400;
+    color: #B51035;
+    line-height: 1.5;
+}
+
+/* 必須バッジ */
+
+.contact-form__badge {
+    display: inline-flex;
+    align-items: center;
+    color: #B51035;
+    font-size: min(3.2vw, 0.75rem);
+    line-height: 1.4;
+}
+
+/* 入力欄 */
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 100%;
+    padding: min(2.6666666667vw, 10px) min(3.2vw, 12px);
+    border: 1px solid #707070;
+    border-radius: 5px;
+    font-size: min(3.7333333333vw, 0.875rem);
+    color: #333;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    border-color: var(--dark-blue-color);
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form__textarea {
+    min-height: 300px;
+    resize: vertical;
+}
+
+.contact-form__group:has(.contact-form__textarea) {
+    margin-bottom: min(2.6666666667vw, 10px);
+}
+
+/* プライバシーポリシー */
+
+.contact-form__privacy-note {
+    font-size: min(3.2vw, 0.75rem);
+    line-height: 1.8;
+    color: #333;
+}
+
+.contact-form__privacy-link {
+    color: #333;
+    text-underline-offset: 3px;
+    text-decoration: underline;
+}
+
+/* 同意チェックボックス */
+
+.contact-form__agree {
+    background: #fff;
+    padding: min(3.7333333333vw, 14px);
+    margin-bottom: min(5.3333333333vw, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: min(2.6666666667vw, 10px);
+}
+
+.contact-form__agree-label {
+    display: flex;
+    align-items: center;
+    gap: min(2.6666666667vw, 10px);
+    font-size: min(3.2vw, 0.75rem);
+    cursor: pointer;
+}
+
+.contact-form__checkbox {
+    width: min(3.7333333333vw, 14px);
+    height: min(3.7333333333vw, 14px);
+    accent-color: var(--dark-blue-color);
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.contact-form__agree .contact-form__badge {
+    background: #B51035;
+    color: #fff;
+    padding: min(0.8vw, 3px) min(1.3333333333vw, 5px);
+}
+
+/* 送信ボタン */
+
+.contact-form__submit-wrap {
+    text-align: center;
+}
+
+.contact-form__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: min(2.6666666667vw, 10px);
+    width: 100%;
+    max-width: min(74.6666666667vw, 280px);
+    padding: min(2.6666666667vw, 10px) min(5.3333333333vw, 20px);
+    background: #fff;
+    color: var(--dark-blue-color);
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 600;
+    border: 1px solid var(--dark-blue-color);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-form__submit-arrow {
+    width: min(1.6vw, 6px);
+    height: auto;
+}
+
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .contact-form {
+        width: min(47.3958333333vw, 910px);
+        margin: 0 auto;
+        gap: min(2.6041666667vw, 50px);
+    }
+
+    .contact-form__group {
+        gap: min(0.78125vw, 15px);
+    }
+
+    .contact-form__label {
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+        gap: min(1.0416666667vw, 20px);
+    }
+
+    .contact-form__note,
+    .contact-form__badge {
+        font-size: clamp(0.6563rem, 0.7291666667vw, 0.875rem);
+    }
+
+    .contact-form__input,
+    .contact-form__textarea {
+        padding: min(1.0416666667vw, 20px) min(1.3020833333vw, 25px);
+        font-size: clamp(0.6563rem, 0.7291666667vw, 0.875rem);
+        border-radius: 10px;
+    }
+
+    .contact-form__group:has(.contact-form__textarea) {
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .contact-form__privacy-note {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .contact-form__agree {
+        width: fit-content;
+        padding: min(1.3541666667vw, 26px) min(2.0833333333vw, 40px);
+        margin-bottom: min(2.6041666667vw, 50px);
+    }
+
+    .contact-form__agree .contact-form__badge {
+        padding: min(0.15625vw, 3px) min(0.5729166667vw, 11px);
+    }
+
+    .contact-form__checkbox {
+        width: min(1.0416666667vw, 20px);
+        height: min(1.0416666667vw, 20px);
+    }
+
+    .contact-form__agree-label {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .contact-form__submit {
+        position: relative;
+        max-width: min(18.2291666667vw, 350px);
+        padding: min(1.3020833333vw, 25px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .contact-form__submit:hover {
+        background: var(--dark-blue-color);
+        color: #fff;
+    }
+
+    .contact-form__submit:hover .contact-form__submit-arrow {
+        filter: brightness(0) invert(1);
+    }
+
+    .contact-form__submit-arrow {
+        position: absolute;
+        right: min(1.3020833333vw, 25px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: min(0.5208333333vw, 10px);
+    }
+
+}

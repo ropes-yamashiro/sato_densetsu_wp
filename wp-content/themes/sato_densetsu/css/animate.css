@@ -1,0 +1,67 @@
+/* =========================================
+   カーテンオープンアニメーション
+========================================= */
+
+.curtain-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+/* カーテン本体（白い疑似要素） */
+.curtain-reveal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: translateX(0);
+    transition: transform 1.35s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* .is-revealed が付いたらカーテンを右へスライドアウト */
+.curtain-reveal.is-revealed::after {
+    transform: translateX(150%);
+}
+
+/* overflow: hidden が使えない要素用（team__photo-inner など） */
+.curtain-reveal--clip {
+    overflow: visible;
+    clip-path: inset(0);
+}
+
+
+/* =========================================
+   フェード・スライドアニメーション
+========================================= */
+
+.fadeIn {
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.fadeIn.animated {
+    opacity: 1;
+}
+
+.fadeInUp {
+    transform: translate3d(0, 50px, 0);
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+}
+
+.fadeInUp.animated {
+    transform: none;
+    opacity: 1;
+}
+
+/* 例外 */
+
+.c-photo-item__accent-content.fadeInUp {
+    transform: rotate(-15deg) translate3d(0, 50px, 0);
+}
+
+.c-photo-item__accent-content.fadeInUp.animated {
+    transform: rotate(-15deg) translate3d(0, 0, 0);
+}

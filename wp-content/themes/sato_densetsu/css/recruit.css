@@ -1,0 +1,296 @@
+/* =========================================
+   採用情報リスト
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+/* リード */
+
+.section_content--recruit-lead {
+    text-align: center;
+    padding-bottom: min(10.6666666667vw, 40px);
+}
+
+.recruit-lead__catch {
+    font-size: min(4.8vw, 1.125rem);
+    font-weight: bold;
+    line-height: 1.75;
+    margin-bottom: min(4vw, 15px);
+}
+
+.recruit-lead__text {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 2;
+    color: #333;
+}
+
+/* リスト */
+
+.recruit-list {
+    display: flex;
+    flex-direction: column;
+    gap: min(10.6666666667vw, 40px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* カード */
+
+.recruit-card:not(:last-child) {
+    padding-bottom: min(10.6666666667vw, 40px);
+    border-bottom: 1px solid #0054AC;
+}
+
+.recruit-card__img-wrap {
+    width: 100%;
+    aspect-ratio: 335 / 205;
+    margin-bottom: min(5.3333333333vw, 20px);
+    overflow: hidden;
+    border-radius: 0 60px 0 0;
+}
+
+.recruit-card__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.recruit-card__title {
+    font-size: min(5.3333333333vw, 1.25rem);
+    font-weight: bold;
+    color: var(--dark-blue-color);
+    margin-bottom: min(4vw, 15px);
+}
+
+.recruit-card__text {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: #333;
+    margin-bottom: min(8vw, 30px);
+}
+
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    /* リード */
+
+    .section_content--recruit-lead {
+        padding-bottom: min(4.1666666667vw, 80px);
+    }
+
+    .recruit-lead__catch {
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        margin-bottom: min(2.0833333333vw, 40px);
+    }
+
+    .recruit-lead__text {
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+    }
+
+    /* リスト */
+
+    .recruit-list {
+        width: min(62.5vw, 1200px);
+        margin: 0 auto;
+        gap: min(3.125vw, 60px);
+    }
+
+    /* カード */
+
+    .recruit-card {
+        display: flex;
+        align-items: center;
+        gap: min(4.1666666667vw, 80px);
+    }
+
+    .recruit-card:not(:last-child) {
+        padding-bottom: min(3.125vw, 60px);
+    }
+
+    .recruit-card__img-wrap {
+        flex-shrink: 0;
+        width: min(30.6770833333vw, 589px);
+        aspect-ratio: 589 / 441;
+        margin-bottom: 0;
+    }
+
+    .recruit-card__body {
+        flex: 1;
+    }
+
+    .recruit-card__title {
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        margin-bottom: min(1.5625vw, 30px);
+    }
+
+    .recruit-card__text {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        margin-bottom: min(2.6041666667vw, 50px);
+    }
+
+}
+
+
+
+/* =========================================
+   採用情報　詳細
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+.recruit-detail__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 30px 0 0;
+    min-height: 76px;
+    padding: min(2.6666666667vw, 10px) min(5.3333333333vw, 20px);
+    background: url("/images/recruit/recruit-detail_title_bg-sp.jpg") center / cover no-repeat;
+    font-size: min(4.8vw, 1.125rem);
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: min(8vw, 30px);
+    position: relative;
+    z-index: 0;
+}
+
+.recruit-detail__lead {
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: bold;
+    color: var(--dark-blue-color);
+    text-align: center;
+    margin-bottom: min(8vw, 30px);
+}
+
+.recruit-detail__table {
+    margin-bottom: min(13.3333333333vw, 50px);
+}
+
+.recruit-detail__row {
+    padding: min(4vw, 15px) 0;
+    border-bottom: 1px solid #0054AC;
+}
+
+.recruit-detail__row:first-child {
+    border-top: 1px solid #0054AC;
+}
+
+.recruit-detail__term,
+.recruit-detail__desc {
+    font-size: min(4.2666666667vw, 1rem);
+    line-height: 1.7;
+}
+
+.recruit-detail__term {
+    font-weight: 600;
+    margin-bottom: min(2.6666666667vw, 10px);
+}
+
+.detail__back-link {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: min(2.6666666667vw, 10px) min(8vw, 30px);
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 600;
+    color: #0054AC;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border: 1px solid #0054AC;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 180px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.detail__back-arrow {
+    position: absolute;
+    left: min(5.3333333333vw, 20px);
+    width: min(1.6vw, 6px);
+    height: auto;
+    transform: rotate(180deg);
+    transition: filter 0.3s;
+}
+
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .section_content--recruit-detail .section_space {
+        width: min(62.5vw, 1200px);
+    }
+
+    .recruit-detail__title {
+        background-image: url("/images/recruit/recruit-detail_title_bg-pc.jpg");
+        min-height: 244px;
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        margin-bottom: min(4.1666666667vw, 80px);
+        border-radius: 0 60px 0 0;
+    }
+
+    .recruit-detail__lead {
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        margin-bottom: min(3.125vw, 60px);
+    }
+
+    .recruit-detail__table {
+        margin-bottom: min(4.1666666667vw, 80px);
+    }
+
+    .recruit-detail__row {
+        display: flex;
+        align-items: baseline;
+        gap: min(1.5625vw, 30px);
+        padding: min(1.5625vw, 30px) 0 min(1.5625vw, 30px) min(4.6875vw, 90px);
+    }
+
+    .recruit-detail__term,
+    .recruit-detail__desc {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .recruit-detail__term {
+        flex-shrink: 0;
+        width: min(12.5vw, 240px);
+        margin-bottom: 0;
+    }
+
+    .detail__back-link {
+        padding: min(1.3020833333vw, 25px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        gap: min(0.5208333333vw, 10px);
+        max-width: 350px;
+    }
+
+    .detail__back-arrow {
+        left: min(1.3020833333vw, 25px);
+        width: min(0.5208333333vw, 10px);
+    }
+
+    .detail__back-link:hover {
+        background: #0054AC;
+        color: #fff;
+        border-color: #0054AC;
+    }
+
+    .detail__back-link:hover .detail__back-arrow {
+        filter: brightness(0) invert(1);
+    }
+
+}

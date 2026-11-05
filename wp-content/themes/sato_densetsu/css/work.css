@@ -1,0 +1,434 @@
+/* =========================================
+   施工実績一覧
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+/* グリッド */
+
+.work-list__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(8vw, 30px);
+    margin-bottom: min(13.3333333333vw, 50px);
+}
+
+/* カード */
+
+.work-card {
+    width: 100%;
+    max-width: clamp(20.938rem, 12.726rem + 38.64vw, 31.25rem);
+    border-radius: 0 0 10px 0;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    background: #fff;
+}
+
+.work-card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+.work-card__img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-card__img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 335 / 227;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.work-card__badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bright-blue-color);
+    color: #fff;
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 400;
+    padding: min(0.8vw, 3px) min(4vw, 15px);
+    border-radius: 0 0 5px 0;
+}
+
+.work-card__body {
+    padding: min(4vw, 15px) min(6.6666666667vw, 25px);
+}
+
+.work-card__title {
+    font-size: clamp(1rem, 0.801rem + 0.94vw, 1.25rem);
+    font-weight: bold;
+    line-height: 1.75;
+    margin-bottom: min(2.1333333333vw, 8px);
+}
+
+.work-card__period {
+    font-size: clamp(0.875rem, 0.676rem + 0.94vw, 1.125rem);
+    font-weight: 500;
+}
+
+/* ページネーション */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: min(2.6666666667vw, 10px);
+}
+
+.pagination__list {
+    display: flex;
+    align-items: center;
+    gap: min(1.6vw, 6px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 数字ページリンク */
+
+.pagination__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(8vw, 30px);
+    height: min(8vw, 30px);
+    font-size: min(3.2vw, 0.75rem);
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+}
+
+.pagination__link.is-current {
+    background: #e3e3e3;
+}
+
+.pagination__btn {
+    display: flex;
+    align-items: center;
+    gap: min(1.3333333333vw, 5px);
+    height: min(8vw, 30px);
+    padding: 0 min(2.6666666667vw, 10px);
+    font-size: min(3.2vw, 0.75rem);
+    color: #333;
+    background: none;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.pagination__btn--prev::before,
+.pagination__btn--next::after {
+    content: '';
+    display: block;
+    width: min(1.6vw, 6px);
+    height: min(1.6vw, 6px);
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pagination__btn--prev::before {
+    transform: rotate(-135deg);
+    margin-right: -0.1em;
+}
+
+.pagination__btn--next::after {
+    transform: rotate(45deg);
+    margin-left: -0.1em;
+}
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .section_content--work-list {
+        padding: 0 min(1.0416666667vw, 20px);
+    }
+
+    /* グリッド */
+
+    .work-list__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: min(2.6041666667vw, 50px);
+        width: min(65.8333333333vw, 1264px);
+        margin: 0 auto min(5.2083333333vw, 100px);
+    }
+
+    /* カード */
+
+    .work-card {
+        max-width: none;
+    }
+
+    .work-card__link:hover .work-card__img-wrap img {
+        transform: scale(1.05);
+    }
+
+    .work-card__badge {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        padding: min(0.3125vw, 6px) min(1.1458333333vw, 22px);
+    }
+
+    .work-card__body {
+        padding: min(1.5625vw, 30px);
+    }
+
+    .work-card__title {
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .work-card__period {
+        font-size: clamp(0.6875rem, 0.7291666667vw, 0.875rem);
+    }
+
+    /* ページネーション */
+
+    .pagination__list {
+        gap: 10px;
+    }
+
+    .pagination__link {
+        width: min(2.7083333333vw, 52px);
+        height: min(2.7083333333vw, 52px);
+        padding: 0 min(0.6770833333vw, 13px);
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+    }
+
+    .pagination__btn {
+        height: min(2.7083333333vw, 52px);
+        padding: 0 min(0.8333333333vw, 16px);
+        gap: min(0.3125vw, 6px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .pagination__btn--prev::before,
+    .pagination__btn--next::after {
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #333;
+        border-right: 2px solid #333;
+    }
+
+}
+
+
+
+/* =========================================
+   施工実績 詳細
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+/* 情報 */
+
+.work-detail__head {
+    padding-bottom: min(4vw, 15px);
+    margin-bottom: min(6.6666666667vw, 25px);
+    border-bottom: 1px solid #333;
+}
+
+.work-detail__head .work-card__badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: min(2.6666666667vw, 10px);
+    border-radius: 20px;
+}
+
+.work-detail__title {
+    font-size: min(5.3333333333vw, 1.25rem);
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: min(2.1333333333vw, 8px);
+}
+
+.work-detail__period {
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 500;
+    color: #333;
+}
+
+/* コンテンツブロック */
+
+.detail__content-block {
+    display: flex;
+    flex-direction: column;
+    gap: min(5.3333333333vw, 20px);
+    margin-bottom: min(13.3333333333vw, 50px);
+}
+
+.detail__figure {
+    margin-bottom: min(5.3333333333vw, 20px);
+}
+
+.detail__figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 335 / 205;
+    object-fit: cover;
+}
+
+.detail__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: min(4vw, 15px);
+    list-style: none;
+    margin: 0 0 min(5.3333333333vw, 20px);
+    padding: 0;
+}
+
+.detail__gallery li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 7.5px);
+    margin: 0 auto;
+}
+
+.detail__gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 156 / 115;
+    object-fit: cover;
+}
+
+.detail__text {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    padding: 0 min(4vw, 15px);
+}
+
+/* 一覧へ戻るボタン */
+
+.detail__back-link {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: min(2.6666666667vw, 10px) min(8vw, 30px);
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 600;
+    color: #0054AC;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border: 1px solid #0054AC;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 180px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.detail__back-arrow {
+    position: absolute;
+    left: min(5.3333333333vw, 20px);
+    width: min(1.6vw, 6px);
+    height: auto;
+    transform: rotate(180deg);
+    transition: filter 0.3s;
+}
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .section_content--work-detail {
+        padding: 0 min(1.0416666667vw, 20px);
+    }
+
+    .detail {
+        width: min(57.2916666667vw, 1100px);
+        margin: 0 auto;
+    }
+
+    .work-detail__head {
+        padding-bottom: min(1.5625vw, 30px);
+        margin-bottom: min(3.125vw, 60px);
+    }
+
+    .work-detail__head .work-card__badge {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        padding: min(0.3125vw, 6px) min(2.0833333333vw, 40px);
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .work-detail__title {
+        font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
+        line-height: 1.65;
+        margin-bottom: min(0.5208333333vw, 10px);
+    }
+
+    .work-detail__period {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .detail__content-block {
+        gap: min(3.125vw, 60px);
+        padding: 0 min(4.4791666667vw, 86px);
+        margin-bottom: min(4.1666666667vw, 80px);
+    }
+
+    .detail__figure {
+        margin-bottom: min(1.5625vw, 30px);
+    }
+
+    .detail__gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: min(1.5625vw, 30px);
+        margin-bottom: min(1.5625vw, 30px);
+    }
+
+    .detail__gallery li:last-child:nth-child(odd) {
+        grid-column: auto;
+        max-width: none;
+        width: 100%;
+    }
+
+    .detail__text {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        padding: 0;
+    }
+
+    .detail__back-link {
+        padding: min(1.3020833333vw, 25px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        gap: min(0.5208333333vw, 10px);
+        max-width: 350px;
+    }
+
+    .detail__back-arrow {
+        left: min(1.3020833333vw, 25px);
+        width: min(0.5208333333vw, 10px);
+    }
+
+    .detail__back-link:hover {
+        background: #0054AC;
+        color: #fff;
+        border-color: #0054AC;
+    }
+
+    .detail__back-link:hover .detail__back-arrow {
+        filter: brightness(0) invert(1);
+    }
+
+}

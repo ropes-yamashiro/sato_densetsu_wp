@@ -1,0 +1,219 @@
+/* =========================================
+   ご依頼の流れ
+========================================= */
+
+/* -----------------------------------------
+   SP
+----------------------------------------- */
+
+/* フロー */
+
+.process-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0 0 min(10.6666666667vw, 40px);
+    padding: 0;
+}
+
+.process-flow__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.process-flow__item+.process-flow__item::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 17px solid var(--dark-blue-color);
+    margin: min(4vw, 15px) 0;
+}
+
+.process-flow__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    padding: min(4vw, 15px) min(4.8vw, 18px);
+    border: 1px solid #0054AC;
+    border-radius: 5px;
+}
+
+.process-flow__icon {
+    position: absolute;
+    left: min(4.8vw, 18px);
+    width: min(11.4666666667vw, 43px);
+    height: min(10.1333333333vw, 38px);
+    object-fit: contain;
+}
+
+.process-flow__label {
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: bold;
+    line-height: 1.75;
+    color: var(--dark-blue-color);
+    text-align: center;
+}
+
+/* 詳細リスト */
+
+.process-list {
+    display: flex;
+    flex-direction: column;
+    gap: min(8vw, 30px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.process-list__item {
+    display: flex;
+    align-items: flex-start;
+    gap: min(4vw, 15px);
+}
+
+.process-list__icon-wrap {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.process-list__item:not(:last-child) .process-list__icon-wrap::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 120%;
+    background: #0054AC;
+}
+
+.process-list__icon {
+    width: min(21.3333333333vw, 80px);
+    height: auto;
+    display: block;
+}
+
+.process-list__body {
+    flex: 1;
+    margin-top: min(6.6666666667vw, 25px);
+}
+
+.process-list__title {
+    font-size: min(4.8vw, 1.125rem);
+    font-weight: bold;
+    margin-bottom: min(2.6666666667vw, 10px);
+    color: #0054AC;
+}
+
+.process-list__text {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 2;
+    color: #333;
+}
+
+/* -----------------------------------------
+   PC
+----------------------------------------- */
+
+@media (min-width: 768px) {
+
+    /* フロー */
+
+    .process-flow {
+        width: min(62.5vw, 1200px);
+        margin: 0 auto min(4.1666666667vw, 80px);
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        gap: min(3.125vw, 60px);
+    }
+
+    .process-flow__item {
+        position: relative;
+        width: auto;
+        min-width: 105px;
+        flex: 1;
+    }
+
+    .process-flow__item+.process-flow__item::before {
+        display: none;
+    }
+
+    .process-flow__item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -15%;
+        transform: translate(50%, -50%);
+        width: 0;
+        height: 0;
+        border-top: min(0.625vw, 12px) solid transparent;
+        border-bottom: min(0.625vw, 12px) solid transparent;
+        border-left: min(1.1458333333vw, 22px) solid var(--dark-blue-color);
+        z-index: 1;
+    }
+
+    .process-flow__box {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: min(0.78125vw, 15px);
+        text-align: center;
+        border: 2px solid #0054AC;
+        border-radius: 10px;
+    }
+
+    .process-flow__icon {
+        position: static;
+        width: min(4.6875vw, 90px);
+        height: min(3.90625vw, 75px);
+    }
+
+    .process-flow__label {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    /* 詳細リスト */
+
+    .process-list {
+        gap: min(4.1666666667vw, 80px);
+        width: min(62.5vw, 1200px);
+        margin: 0 auto;
+    }
+
+    .process-list__item {
+        gap: min(2.0833333333vw, 40px);
+        align-items: center;
+    }
+
+    .process-list__icon {
+        width: min(8.3333333333vw, 160px);
+    }
+
+    .process-list__item:not(:last-child) .process-list__icon-wrap::after {
+        width: 2px;
+    }
+
+    .process-list__body {
+        margin: 0;
+    }
+
+    .process-list__title {
+        font-size: clamp(1.125rem, 1.5625vw, 1.875rem);
+        margin-bottom: min(1.0416666667vw, 20px);
+    }
+
+    .process-list__text {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+}

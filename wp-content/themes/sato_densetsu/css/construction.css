@@ -1,0 +1,283 @@
+/* =========================================
+   高圧工事とは イントロ
+========================================= */
+
+.section_content--construction-intro {
+    padding-bottom: min(33.3333333333vw, 125px);
+    position: relative;
+}
+
+.section_content--construction-intro::before,
+.section_content--construction-intro::after {
+    content: "";
+    position: absolute;
+    right: 0;
+}
+
+.section_content--construction-intro::after {
+    width: min(52.2666666667vw, 196px);
+    height: min(12vw, 45px);
+    background: url("/images/construction/construction-img-deco-sp01.jpg") center / cover no-repeat;
+    bottom: min(13.3333333333vw, 50px);
+}
+
+.construction-intro__inner {
+    display: flex;
+    flex-direction: column;
+    gap: min(6.6666666667vw, 25px);
+}
+
+.construction-intro__catch {
+    font-size: min(4.8vw, 1.125rem);
+    font-weight: bold;
+    line-height: 1.7;
+    margin-bottom: min(12vw, 45px);
+}
+
+.construction-intro__catch em {
+    color: var(--dark-blue-color);
+}
+
+.construction-intro__desc {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.7;
+}
+
+/* 画像エリア */
+
+.construction-intro__img-area {
+    position: relative;
+}
+
+.construction-intro__img-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.construction-intro__img-sub-01,
+.construction-intro__img-sub-02 {
+    position: absolute;
+}
+
+.construction-intro__img-sub-01 img,
+.construction-intro__img-sub-02 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.construction-intro__img-sub-01 {
+    bottom: max(-90px, -24vw);
+    left: min(2.6666666667vw, 10px);
+    width: 30%;
+}
+
+.construction-intro__img-sub-01 img {
+    aspect-ratio: 100 / 115;
+}
+
+/* =========================================
+   PC
+========================================= */
+
+@media (min-width: 768px) {
+
+    .section_content--construction-intro {
+        padding: min(5.2083333333vw, 100px) min(17.1875vw, 330px) 0 0;
+    }
+
+    .section_content--construction-intro::before {
+        width: min(5.7291666667vw, 110px);
+        height: min(35.3125vw, 678px);
+        background: url("/images/construction/construction-img-deco02.jpg") center / cover no-repeat;
+        top: 0;
+    }
+
+    .section_content--construction-intro::after {
+        width: min(38.5416666667vw, 740px);
+        height: min(6.875vw, 132px);
+        background-image: url("/images/construction/construction-img-deco-pc01.jpg");
+        bottom: 0;
+    }
+
+    .construction-intro__inner {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: min(19.7916666667vw, 380px);
+    }
+
+    .construction-intro__text-area {
+        flex: 1;
+        margin-top: max(-250px, -13.0208333333vw);
+    }
+
+    .construction-intro__catch {
+        font-size: clamp(0.875rem, 0.208rem + 1.39vw, 1.875rem);
+        margin-bottom: min(2.6041666667vw, 50px);
+    }
+
+    .construction-intro__desc {
+        font-size: clamp(0.8438rem, 0.9375vw, 1.125rem);
+        padding-right: min(1.5625vw, 30px);
+    }
+
+    /* 画像エリア */
+
+    .construction-intro__img-area {
+        width: min(35.5208333333vw, 682px);
+        flex-shrink: 0;
+    }
+
+    .construction-intro__img-main {
+        position: relative;
+        z-index: 1;
+    }
+
+    .construction-intro__img-main img {
+        object-fit: cover;
+    }
+
+    .construction-intro__img-sub-01 {
+        bottom: min(6.25vw, 120px);
+        right: max(-235px, -12.2395833333vw);
+        left: auto;
+        width: 45.5%;
+        z-index: 2;
+    }
+
+    .construction-intro__img-sub-01 img {
+        aspect-ratio: 310 / 414;
+    }
+
+    .construction-intro__img-sub-02 {
+        top: max(-60px, -3.125vw);
+        right: max(-90px, -4.6875vw);
+        width: 49%;
+    }
+
+    .construction-intro__img-sub-02 img {
+        aspect-ratio: 334 / 180;
+    }
+
+}
+
+/* =========================================
+   高圧工事の魅力・危険性
+========================================= */
+
+.section_content--features-detail {
+    padding: min(10.6666666667vw, 40px) 0 0;
+}
+
+.features-detail__list {
+    display: flex;
+    flex-direction: column;
+    gap: min(10.6666666667vw, 40px);
+}
+
+.features-detail__item {
+    display: flex;
+    flex-direction: column;
+    gap: min(6.6666666667vw, 25px);
+}
+
+.features-detail__badge {
+    font-size: min(4.2666666667vw, 1rem);
+    font-weight: 600;
+    border-bottom: 1px solid #333333;
+    padding: 0 0 min(2.6666666667vw, 10px) min(2.1333333333vw, 8px);
+    margin-bottom: min(5.3333333333vw, 20px);
+}
+
+.features-detail__catch {
+    font-size: min(4.8vw, 1.125rem);
+    font-weight: bold;
+    line-height: 1.7;
+    margin-bottom: min(6.6666666667vw, 25px);
+}
+
+.features-detail__catch em {
+    color: var(--dark-blue-color);
+}
+
+.features-detail__desc {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.75;
+}
+
+.features-detail__img-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+
+    .section_content--features-detail {
+        padding: min(5.2083333333vw, 100px) min(1.0416666667vw, 20px) 0;
+        position: relative;
+    }
+
+    .section_content--features-detail::before {
+        content: "";
+        position: absolute;
+        width: min(5.7291666667vw, 110px);
+        height: min(32.65625vw, 627px);
+        background: url("/images/construction/features-img-deco.jpg") center / cover no-repeat;
+        top: min(13.0208333333vw, 250px);
+        left: 0;
+    }
+
+    .features-detail__list {
+        width: min(72.9166666667vw, 1400px);
+        margin: 0 auto;
+        gap: min(5.2083333333vw, 100px);
+    }
+
+    .features-detail__item {
+        flex-direction: row;
+        align-items: center;
+        gap: min(6.25vw, 120px);
+    }
+
+    .features-detail__item:nth-child(odd) {
+        margin-left: min(7.2916666667vw, 140px);
+    }
+
+    .features-detail__item:nth-child(even) {
+        flex-direction: row-reverse;
+        margin-right: min(7.2916666667vw, 140px);
+    }
+
+    .features-detail__text-area {
+        flex: 1;
+    }
+
+    .features-detail__badge {
+        font-size: clamp(0.9375rem, 1.0416666667vw, 1.25rem);
+        padding-bottom: min(0.78125vw, 15px);
+        margin-bottom: min(1.5625vw, 30px);
+    }
+
+    .features-detail__catch {
+        font-size: clamp(0.875rem, 0.208rem + 1.39vw, 1.875rem);
+        margin-bottom: min(2.6041666667vw, 50px);
+    }
+
+    .features-detail__desc {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .features-detail__img-area {
+        width: min(34.375vw, 660px);
+        flex-shrink: 0;
+    }
+
+    .features-detail__img-area img {
+        aspect-ratio: 660 / 600;
+        object-fit: cover;
+    }
+
+}

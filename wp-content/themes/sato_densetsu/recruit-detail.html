@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/recruit.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <title>採用情報詳細</title>
+</head>
+
+<body>
+    <header class="l-header">
+        <div class="header__inner">
+            <!-- ロゴ -->
+            <a href="/#top" class="header__logo">
+                <img src="images/common/header_logo.png" alt="佐藤電設工業株式会社">
+                <span class="header__logo-name">佐藤電設工業</span>
+            </a>
+            <!-- PC ナビ -->
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="/#top" class="header__nav-link">TOP</a></li>
+                    <li><a href="/about-us.html" class="header__nav-link">私たちについて</a></li>
+                    <li><a href="/construction.html" class="header__nav-link">高圧工事とは</a></li>
+                    <li><a href="/work-list.html" class="header__nav-link">施工実績</a></li>
+                    <li><a href="/process.html" class="header__nav-link">ご依頼の流れ</a></li>
+                    <li><a href="/team-list.html" class="header__nav-link">社員紹介</a></li>
+                    <li><a href="/faq.html" class="header__nav-link">よくある質問</a></li>
+                </ul>
+            </nav>
+            <!-- RECRUIT / CONTACT ボタン -->
+            <ul class="header__btns">
+                <li>
+                    <a href="/recruit-list.html" class="header__btn header__btn--recruit">
+                        <img src="images/common/recruit_icon.svg" alt="" aria-hidden="true">
+                        <span>RECRUIT</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact.html" class="header__btn header__btn--contact">
+                        <img src="images/common/contact.svg" alt="" aria-hidden="true">
+                        <span>CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- SP ハンバーガーボタン -->
+            <button class="header__hamburger" id="btn_spmenu" aria-label="メニューを開く" aria-expanded="false"
+                aria-controls="sp-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP メニュー -->
+    <div class="sp-menu" id="sp-menu" role="dialog" aria-label="メニュー" aria-hidden="true">
+        <div class="sp-menu__inner">
+            <!-- ヘッダー行 -->
+            <div class="sp-menu__head">
+                <a href="/#top" class="sp-menu__logo">
+                    <img src="images/common/header_logo.png" alt="佐藤電設工業株式会社">
+                    <span>佐藤電設工業</span>
+                </a>
+                <button class="sp-menu__close" id="btn_spmenu_close" aria-label="メニューを閉じる">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- ナビ＋サブ -->
+            <div class="sp-menu__body">
+                <!-- ナビ 2カラム -->
+                <nav class="sp-menu__nav">
+                    <ul class="sp-menu__nav-list">
+                        <li>
+                            <a href="/about-us.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">ABOUT</span>
+                                <span class="sp-menu__nav-ja">私たちについて</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/construction.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">HIGH-VOLTAGE<br>CONSTRUCTION</span>
+                                <span class="sp-menu__nav-ja">高圧工事とは</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/work-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">WORK</span>
+                                <span class="sp-menu__nav-ja">施工実績</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/process.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">PROCESS</span>
+                                <span class="sp-menu__nav-ja">ご依頼の流れ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/team-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">OUR TEAM</span>
+                                <span class="sp-menu__nav-ja">社員紹介</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/recruit-list.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">RECRUIT</span>
+                                <span class="sp-menu__nav-ja">採用情報</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/faq.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">FAQ</span>
+                                <span class="sp-menu__nav-ja">よくある質問</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact.html" class="sp-menu__nav-link">
+                                <span class="sp-menu__nav-en">CONTACT</span>
+                                <span class="sp-menu__nav-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- サブリンク -->
+                <ul class="sp-menu__sub">
+                    <li><a href="/site-map.html" class="sp-menu__sub-link">— サイトマップ</a></li>
+                    <li><a href="/privacy.html" class="sp-menu__sub-link">— プライバシーポリシー</a></li>
+                </ul>
+            </div><!-- /.sp-menu__body -->
+            <!-- 縦書きデコテキスト -->
+            <p class="sp-menu__deco-text" aria-hidden="true">
+                <span>SATO ELECTRICAL</span>
+                <span class="sp-menu__deco-text--construction">CONSTRUCTION</span>
+            </p>
+        </div>
+    </div>
+    <!-- オーバーレイ -->
+    <div class="sp-menu__overlay" id="sp-menu-overlay"></div>
+    <!-- メインコンテンツ -->
+    <main class="l-main">
+        <div class="l-page">
+            <!-- メインビジュアル -->
+            <div class="lower-fv">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/recruit/mv_pc.jpg">
+                    <img src="images/recruit/mv_sp.jpg" alt="採用情報" class="fv__bg">
+                </picture>
+            </div>
+
+            <div class="lower-fv-deco" id="fv-deco" aria-hidden="true"></div>
+
+            <!-- ページタイトル＋コンテンツ -->
+            <section class="section_content--intro fadeInUp">
+                <div class="section_space">
+                    <!-- テキストエリア -->
+                    <h1 class="lower-page-title">
+                        <span class="lower-page-title-en">RECRUIT</span>
+                        <span class="lower-page-title-ja">採用情報</span>
+                    </h1>
+                </div>
+            </section>
+
+            <!-- 採用情報詳細 -->
+            <section class="section_content--recruit-detail fadeInUp">
+                <div class="section_space">
+                    <h2 class="recruit-detail__title">業務種類名</h2>
+                    <h3 class="recruit-detail__lead">募集要項</h3>
+                    <dl class="recruit-detail__table">
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">年齢</dt>
+                            <dd class="recruit-detail__desc">◯◯歳〜◯◯歳</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">雇用形態</dt>
+                            <dd class="recruit-detail__desc">正社員</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">条件</dt>
+                            <dd class="recruit-detail__desc">条件入ります条件入ります</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">休日</dt>
+                            <dd class="recruit-detail__desc">週休2日制、祝日、年末年始、有給休暇</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">勤務地</dt>
+                            <dd class="recruit-detail__desc">勤務地入ります</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">勤務時間</dt>
+                            <dd class="recruit-detail__desc">8:00〜17:00</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">給与</dt>
+                            <dd class="recruit-detail__desc">経験、年齢、能力を考慮し規定により決定します</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">待遇</dt>
+                            <dd class="recruit-detail__desc">昇給・賞与・手当等入ります</dd>
+                        </div>
+                        <div class="recruit-detail__row">
+                            <dt class="recruit-detail__term">応募方法</dt>
+                            <dd class="recruit-detail__desc">お電話またはお問い合わせフォームにてご応募ください</dd>
+                        </div>
+                    </dl>
+                    <!-- 一覧へ戻るボタン -->
+                    <a href="/recruit-list.html" class="detail__back-link">
+                        <img src="images/common/cp_arrow-blue.png" class="detail__back-arrow" alt="" aria-hidden="true">
+                        採用一覧へ
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+        <!-- CONTACT / FAQ バナー -->
+        <div class="footer-banners fadeInUp">
+            <div class="section_space">
+                <ul class="footer-banners__list">
+                    <li class="footer-banners__item">
+                        <div class="footer-banner footer-banner--contact">
+                            <div class="footer-banner__body">
+                                <div class="footer-banner__title">
+                                    <p class="footer-banner__en">CONTACT</p>
+                                    <p class="footer-banner__ja">お問い合わせ</p>
+                                </div>
+                                <a href="/contact.html" class="c-btn is-white">お問い合わせ <img class="c-btn__arrow"
+                                        src="images/common/cp_arrow-blue.png" alt="" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer-banners__item">
+                        <div class="footer-banner footer-banner--faq">
+                            <div class="footer-banner__body">
+                                <div class="footer-banner__title">
+                                    <p class="footer-banner__en">FAQ</p>
+                                    <p class="footer-banner__ja">よくある質問</p>
+                                </div>
+                                <a href="/faq.html" class="c-btn is-white">詳しく見る <img class="c-btn__arrow"
+                                        src="images/common/cp_arrow-blue.png" alt="" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__inner">
+            <div class="footer__body">
+                <!-- ロゴ・会社情報 -->
+                <div class="footer__info">
+                    <a href="/#top" class="footer__logo">
+                        <img src="images/common/footer_logo.png" alt="佐藤電設工業株式会社">
+                        <span>佐藤電設工業</span>
+                    </a>
+                    <address class="footer__address">
+                        <p>〒000-00000<br class="sp_in">○○県○○市○○○○</p>
+                        <p><a href="tel:000-000-0000">Tel：000-000-0000</a><br><span class="not-link"><a
+                                    href="tel:000-000-0000">Fax：000-000-0000</a></span></p>
+                    </address>
+                </div>
+                <!-- PCナビ -->
+                <nav class="footer__nav">
+                    <ul class="footer__nav-col">
+                        <li><a href="/#top" class="footer__nav-link">TOP</a></li>
+                        <li><a href="/about-us.html" class="footer__nav-link">私たちについて</a></li>
+                        <li><a href="/construction.html" class="footer__nav-link">高圧工事とは</a></li>
+                        <li><a href="/work-list.html" class="footer__nav-link">施工実績</a></li>
+                    </ul>
+                    <ul class="footer__nav-col">
+                        <li><a href="/process.html" class="footer__nav-link">ご依頼の流れ</a></li>
+                        <li><a href="/team-list.html" class="footer__nav-link">社員紹介</a></li>
+                        <li><a href="/recruit-list.html" class="footer__nav-link">採用情報</a></li>
+                        <li><a href="/contact.html" class="footer__nav-link">お問い合わせ</a></li>
+                    </ul>
+                    <ul class="footer__nav-col">
+                        <li><a href="/faq.html" class="footer__nav-link">よくある質問</a></li>
+                        <li><a href="/site-map.html" class="footer__nav-link">サイトマップ</a></li>
+                        <li><a href="/privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__copyright">© Sato electrical construction All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ページトップ -->
+    <button class="page-top" id="page-top" aria-label="ページトップへ"></button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pages.js"></script>
+</body>
+
+</html>
