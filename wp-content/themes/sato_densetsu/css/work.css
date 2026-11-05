@@ -537,3 +537,19 @@
 a.pagination__btn {
     text-decoration: none;
 }
+
+/* PC: 表のセル数に応じて画像を均等割りにする（2セル=50%、3セル=約33%。余白は従来どおり） */
+@media (min-width: 768px) {
+    .detail__wysiwyg tr {
+        display: flex;
+        gap: min(1.5625vw, 30px);
+    }
+
+    .detail__wysiwyg td,
+    .detail__wysiwyg td:last-child:nth-child(odd) {
+        flex: 1 1 0;
+        min-width: 0;
+        width: auto !important;
+        margin: 0;
+    }
+}
