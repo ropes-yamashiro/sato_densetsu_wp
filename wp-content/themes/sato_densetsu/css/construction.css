@@ -17,7 +17,7 @@
 .section_content--construction-intro::after {
     width: min(52.2666666667vw, 196px);
     height: min(12vw, 45px);
-    background: url("/images/construction/construction-img-deco-sp01.jpg") center / cover no-repeat;
+    background: url("../images/construction/construction-img-deco-sp01.jpg") center / cover no-repeat;
     bottom: min(13.3333333333vw, 50px);
 }
 
@@ -91,14 +91,14 @@
     .section_content--construction-intro::before {
         width: min(5.7291666667vw, 110px);
         height: min(35.3125vw, 678px);
-        background: url("/images/construction/construction-img-deco02.jpg") center / cover no-repeat;
+        background: url("../images/construction/construction-img-deco02.jpg") center / cover no-repeat;
         top: 0;
     }
 
     .section_content--construction-intro::after {
         width: min(38.5416666667vw, 740px);
         height: min(6.875vw, 132px);
-        background-image: url("/images/construction/construction-img-deco-pc01.jpg");
+        background-image: url("../images/construction/construction-img-deco-pc01.jpg");
         bottom: 0;
     }
 
@@ -225,7 +225,7 @@
         position: absolute;
         width: min(5.7291666667vw, 110px);
         height: min(32.65625vw, 627px);
-        background: url("/images/construction/features-img-deco.jpg") center / cover no-repeat;
+        background: url("../images/construction/features-img-deco.jpg") center / cover no-repeat;
         top: min(13.0208333333vw, 250px);
         left: 0;
     }

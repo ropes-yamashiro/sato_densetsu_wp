@@ -16,7 +16,7 @@
     transform: translateX(-50%);
     width: 100%;
     height: clamp(26.5rem, 14.556rem + 56.21vw, 41.5rem);
-    background: url("/images/common/fv_deco-sp.png") center bottom / contain no-repeat;
+    background: url("../images/common/fv_deco-sp.png") center bottom / contain no-repeat;
     pointer-events: none;
     z-index: -1;
     visibility: hidden;
@@ -115,7 +115,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("/images/common/bg_color_sp.jpg") center top / 100% auto repeat-y;
+    background: url("../images/common/bg_color_sp.jpg") center top / 100% auto repeat-y;
     z-index: 0;
 }
 
@@ -137,7 +137,7 @@
     }
 
     .lower-fv-deco {
-        background-image: url("/images/common/fv_deco-pc.png");
+        background-image: url("../images/common/fv_deco-pc.png");
         height: min(40.5208333333vw, 778px);
     }
 
@@ -179,7 +179,7 @@
     /* 背景カラー */
 
     .has-bg-color::before {
-        background: url("/images/common/bg_color_pc.jpg") center / cover no-repeat;
+        background: url("../images/common/bg_color_pc.jpg") center / cover no-repeat;
     }
 
 }

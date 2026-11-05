@@ -3,7 +3,7 @@
 ========================================= */
 
 body {
-    background: url("/images/common/bg_color_sp.jpg") center top / 100% auto repeat-y fixed;
+    background: url("../images/common/bg_color_sp.jpg") center top / 100% auto repeat-y fixed;
 }
 
 .l-page {
@@ -18,7 +18,7 @@ body {
 @media (min-width: 768px) {
 
     body {
-        background-image: url("/images/common/bg_color_pc.jpg");
+        background-image: url("../images/common/bg_color_pc.jpg");
     }
 
     .l-page {
@@ -275,4 +275,283 @@ body {
         width: min(0.5208333333vw, 10px);
     }
 
+}
+/* ==============================
+   WordPress化で追加：Contact Form 7 / 確認画面 / 完了画面
+   確認画面・完了画面は静的HTMLに無いため、フォームと同じトーンで追加（デザイン未提供）
+   ============================== */
+.contact-form .wpcf7-form-control-wrap {
+    display: block;
+}
+
+.contact-form__agree .wpcf7-list-item {
+    margin: 0;
+}
+
+.contact-form__agree .wpcf7-list-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-form__agree {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+input.contact-form__submit {
+    appearance: none;
+    font-family: inherit;
+}
+
+input.contact-form__submit:hover {
+    background: var(--dark-blue-color);
+    color: #fff;
+}
+
+.wpcf7-not-valid-tip {
+    display: block;
+    margin-top: 6px;
+    font-size: min(3.2vw, 0.75rem);
+    color: #B51035;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 20px 0 0;
+    padding: 10px 14px;
+    font-size: min(3.2vw, 0.75rem);
+    text-align: center;
+}
+
+.wpcf7-spinner {
+    display: block;
+    margin: 10px auto 0;
+}
+
+.contact-form__confirm-lead,
+.c-form__confirm-lead {
+    margin-bottom: min(8vw, 30px);
+    font-size: min(4vw, 1rem);
+    line-height: 1.8;
+    text-align: center;
+}
+
+div#wpcf7cpcnf {
+    padding-top: min(5.3333333333vw, 20px);
+}
+
+div#wpcf7cpcnf table {
+    width: 100%;
+    margin-bottom: min(10.6666666667vw, 40px);
+    border-top: 1px solid #707070;
+}
+
+div#wpcf7cpcnf th,
+div#wpcf7cpcnf td {
+    display: block;
+    padding: min(3.2vw, 12px) min(2.6666666667vw, 10px);
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.75;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+div#wpcf7cpcnf th {
+    font-weight: 700;
+    color: var(--dark-blue-color);
+    padding-bottom: 0;
+}
+
+div#wpcf7cpcnf td {
+    border-bottom: 1px solid #707070;
+}
+
+div.wpcf7cp-btns {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: min(5.3333333333vw, 20px);
+    margin-top: 0;
+}
+
+button.wpcf7cp-cfm-edit-btn,
+button.wpcf7cp-cfm-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(74.6666666667vw, 280px);
+    min-height: min(13.3333333333vw, 50px);
+    margin: 0;
+    border: 1px solid var(--dark-blue-color);
+    font-family: inherit;
+    font-size: min(3.7333333333vw, 0.875rem);
+    font-weight: 600;
+    background: #fff;
+    color: var(--dark-blue-color);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button.wpcf7cp-cfm-submit-btn {
+    background: var(--dark-blue-color);
+    color: #fff;
+}
+
+button.wpcf7cp-cfm-edit-btn:hover,
+button.wpcf7cp-cfm-submit-btn:hover {
+    background: var(--bright-blue-color);
+    border-color: var(--bright-blue-color);
+    color: #fff;
+}
+
+/* 完了画面 */
+.form-complete {
+    text-align: center;
+}
+
+.form-complete[hidden],
+.form-complete [hidden] {
+    display: none;
+}
+
+.form-complete__title {
+    margin-bottom: min(5.3333333333vw, 20px);
+    font-size: min(5.3333333333vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--dark-blue-color);
+}
+
+.form-complete__text {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 2;
+}
+
+.form-complete__btn {
+    margin-top: min(10.6666666667vw, 40px);
+}
+
+@media (min-width: 768px) {
+    .contact-form__confirm-lead,
+    .c-form__confirm-lead {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    div#wpcf7cpcnf th,
+    div#wpcf7cpcnf td {
+        display: table-cell;
+        padding: min(1.0416666667vw, 20px) min(0.5208333333vw, 10px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        border-bottom: 1px solid #707070;
+    }
+
+    div#wpcf7cpcnf th {
+        width: 30%;
+        padding-bottom: min(1.0416666667vw, 20px);
+    }
+
+    div.wpcf7cp-btns {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button.wpcf7cp-cfm-edit-btn,
+    button.wpcf7cp-cfm-submit-btn {
+        width: min(14.5833333333vw, 280px);
+        min-height: min(2.6041666667vw, 50px);
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .form-complete__title {
+        font-size: clamp(1rem, 1.25vw, 1.375rem);
+    }
+
+    .form-complete__text {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+    }
+
+    .form-complete__btn {
+        margin-top: min(2.6041666667vw, 50px);
+    }
+}
+
+@media (min-width: 768px) {
+    div#wpcf7cpcnf,
+    .contact-form__confirm-lead {
+        width: min(47.3958333333vw, 910px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Confirm Plus と CF7 のエラーが二重に出る場合は先頭の1つだけ表示 */
+.wpcf7-not-valid-tip + .wpcf7-not-valid-tip {
+    display: none;
+}
+
+/* エラー・結果メッセージはフォーム幅に揃える */
+@media (min-width: 768px) {
+    .wpcf7 form .wpcf7-response-output {
+        width: min(47.3958333333vw, 910px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* CF7標準CSSは後から読み込まれるため、詳細度を上げてPCで左右中央にする */
+.wpcf7 form.wpcf7-form .wpcf7-response-output {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .wpcf7 form.wpcf7-form .wpcf7-response-output {
+        width: min(47.3958333333vw, 910px);
+        margin: min(1.5625vw, 30px) auto 0;
+    }
+}
+
+/* 送信ボタン横のスピナーがボタンを左にずらさないよう、絶対配置にして幅を取らせない */
+.contact-form__submit-wrap {
+    position: relative;
+}
+
+.contact-form__submit-wrap .wpcf7-spinner {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + min(46vw, 160px));
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+/* ------------------------------------------------------------
+   確認画面（Confirm Plus）の幅・余白
+   - Confirm Plus 側CSSの `div#wpcf7cpcnf { width: 100% }` が後から読み込まれるため、詳細度を上げて上書き
+   - Confirm Plus は確認画面を絶対配置で重ね、入力フォームは visibility:hidden のままなので、
+     入力フォームの高さ分の空白が下に残る → 確認画面表示中（.wpcf7cp-form-hide）は入力フォームを display:none にし、
+     確認画面を通常配置に戻す
+   ------------------------------------------------------------ */
+.wpcf7 form.wpcf7cp-form-hide {
+    display: none;
+}
+
+.section_content--contact .wpcf7 div#wpcf7cpcnf {
+    position: static;
+    width: 100%;
+    max-width: 910px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .section_content--contact .wpcf7 div#wpcf7cpcnf {
+        width: min(47.3958333333vw, 910px);
+    }
+}
+
+/* 送信成功 → 完了ページへ遷移するまでの一瞬、入力画面が見えないようにする（高さは保持してレイアウトを動かさない） */
+.is-form-finishing .section_content--contact .wpcf7 {
+    visibility: hidden;
 }

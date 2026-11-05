@@ -3,7 +3,7 @@
 // ── WORKスライダー ──
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.work__slider');
-    if (!slider) return;
+    if (!slider || !slider.querySelector('.swiper-wrapper')) return;
 
     const slideCount = slider.querySelectorAll('.swiper-slide').length;
 

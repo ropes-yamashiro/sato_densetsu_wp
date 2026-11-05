@@ -1,0 +1,80 @@
+<form class="contact-form" action="#" method="post" novalidate>
+                        <!-- お名前 -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="name">
+                                お名前
+                                <span class="contact-form__badge">※必須</span>
+                            </label>
+                            <input class="contact-form__input" type="text" id="name" name="name" placeholder="例） 山田太郎"
+                                required>
+                        </div>
+                        <!-- 会社名 -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="company">
+                                会社名（団体名）
+                            </label>
+                            <input class="contact-form__input" type="text" id="company" name="company"
+                                placeholder="例） 佐藤電設工業">
+                            <span class="contact-form__note">※法人や団体でご利用のお客さまは会社名（団体名）をご入力ください。</span>
+                        </div>
+                        <!-- 電話番号 -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="tel">
+                                電話番号
+                                <span class="contact-form__badge">※必須</span>
+                            </label>
+                            <input class="contact-form__input" type="tel" id="tel" name="tel" placeholder="例）0123456789"
+                                required>
+                        </div>
+                        <!-- メールアドレス -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="email">
+                                メールアドレス
+                                <span class="contact-form__badge">※必須</span>
+                            </label>
+                            <input class="contact-form__input" type="email" id="email" name="email"
+                                placeholder="例） ◯◯◯◯◯@◯◯◯◯◯.com" required>
+                        </div>
+                        <!-- メールアドレス（確認） -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="email-confirm">
+                                メールアドレス（確認）
+                                <span class="contact-form__badge">※必須</span>
+                            </label>
+                            <input class="contact-form__input" type="email" id="email-confirm" name="email-confirm"
+                                placeholder="確認のためもう一度ご記入ください" required>
+                        </div>
+                        <!-- 住所 -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="address">住所</label>
+                            <input class="contact-form__input" type="text" id="address" name="address"
+                                placeholder="例） ◯◯県◯◯市◯◯町◯◯◯">
+                        </div>
+                        <!-- お問い合わせ内容 -->
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="message">
+                                お問い合わせ内容
+                                <span class="contact-form__badge">※必須</span>
+                            </label>
+                            <textarea class="contact-form__textarea" id="message" name="message"
+                                placeholder="内容をご入力ください。" required></textarea>
+                        </div>
+                        <!-- プライバシーポリシー -->
+                        <p class="contact-form__privacy-note">お問い合わせフォームにご入力いただきました個人情報は、弊社の<a href="<?php echo esc_url( home_url( '/privacy/' ) ); ?>"
+                                target="_blank" class="contact-form__privacy-link">プライバシーポリシー</a>に沿って適正に取り扱っております。</p>
+                        <div class="contact-form__agree">
+                            <label class="contact-form__agree-label">
+                                <input class="contact-form__checkbox" type="checkbox" name="agree" required>
+                                プライバシーポリシーに同意する
+                                <span class="contact-form__badge">必須</span>
+                            </label>
+                        </div>
+                        <!-- 送信ボタン -->
+                        <div class="contact-form__submit-wrap">
+                            <button class="contact-form__submit" type="submit">
+                                この内容で送信する
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/cp_arrow-blue.png" class="contact-form__submit-arrow" alt=""
+                                    aria-hidden="true">
+                            </button>
+                        </div>
+                    </form>

@@ -15,7 +15,7 @@
     right: 0;
     width: min(13.8666666667vw, 52px);
     height: min(55.4666666667vw, 208px);
-    background: url("/images/about-us/about-us-deco.jpg") center / cover no-repeat;
+    background: url("../images/about-us/about-us-deco.jpg") center / cover no-repeat;
     z-index: -1;
 }
 
@@ -106,7 +106,7 @@
         right: 0;
         width: min(17.96875vw, 345px);
         height: min(5.2083333333vw, 100px);
-        background: url("/images/about-us/about-intro_img-area-deco.jpg") center / cover no-repeat;
+        background: url("../images/about-us/about-intro_img-area-deco.jpg") center / cover no-repeat;
         z-index: -1;
     }
 
@@ -416,7 +416,7 @@
     left: 50%;
     width: min(2.1333333333vw, 8px);
     height: min(2.1333333333vw, 8px);
-    background: url("/images/common/cp_arrow-blue.png") center / contain no-repeat;
+    background: url("../images/common/cp_arrow-blue.png") center / contain no-repeat;
 }
 
 .history__btn-prev::after {
@@ -553,7 +553,7 @@
 
     .history__btn-prev:not(.swiper-button-disabled):hover::after,
     .history__btn-next:not(.swiper-button-disabled):hover::after {
-        background-image: url("/images/common/cp_arrow.png");
+        background-image: url("../images/common/cp_arrow.png");
     }
 
     /* カード */

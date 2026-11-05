@@ -1,3 +1,13 @@
+/*
+Theme Name: sato_densetsu
+Theme URI: https://satouwp.php74.ropes.co.jp/
+Author: ROPES
+Description: 佐藤電設工業株式会社 オリジナルテーマ
+Version: 1.0.0
+Text Domain: sato_densetsu
+Update URI: false
+*/
+
 html {
     scroll-behavior: smooth;
 }
@@ -393,11 +403,11 @@ html {
 }
 
 .footer-banner--contact {
-    background: url("/images/common/footer-bnr-contact_bg.jpg") center center / cover no-repeat;
+    background: url("images/common/footer-bnr-contact_bg.jpg") center center / cover no-repeat;
 }
 
 .footer-banner--faq {
-    background: url("/images/common/footer-bnr-faq_bg.jpg") center center / cover no-repeat;
+    background: url("images/common/footer-bnr-faq_bg.jpg") center center / cover no-repeat;
 }
 
 .footer-banner__body {

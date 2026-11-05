@@ -404,3 +404,108 @@
     }
 
 }
+/* ==============================
+   WordPress化で追加：本文WYSIWYG（SCF content）
+   画像=単体 / 横並びは表（TinyMCE テーブル）
+   ============================== */
+.detail__wysiwyg > * {
+    margin: 0;
+}
+
+.detail__wysiwyg p {
+    font-size: min(3.7333333333vw, 0.875rem);
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    padding: 0 min(4vw, 15px);
+}
+
+.detail__wysiwyg h2,
+.detail__wysiwyg h3 {
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0 min(4vw, 15px);
+}
+
+.detail__wysiwyg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.detail__wysiwyg > p:has(> img:only-child) {
+    padding: 0;
+}
+
+.detail__wysiwyg > p > img:only-child {
+    aspect-ratio: 335 / 205;
+}
+
+.detail__wysiwyg table,
+.detail__wysiwyg tbody {
+    display: block;
+    width: 100% !important;
+    border: 0;
+}
+
+.detail__wysiwyg tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: min(4vw, 15px);
+}
+
+.detail__wysiwyg td {
+    display: block;
+    width: auto !important;
+    padding: 0;
+    border: 0;
+}
+
+.detail__wysiwyg td img {
+    aspect-ratio: 156 / 115;
+}
+
+.detail__wysiwyg td:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 7.5px) !important;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .detail__wysiwyg p {
+        font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
+        padding: 0;
+    }
+
+    .detail__wysiwyg h2,
+    .detail__wysiwyg h3 {
+        padding: 0;
+    }
+
+    .detail__wysiwyg tr {
+        grid-template-columns: repeat(3, 1fr);
+        gap: min(1.5625vw, 30px);
+    }
+
+    .detail__wysiwyg td:last-child:nth-child(odd) {
+        grid-column: auto;
+        width: auto !important;
+    }
+}
+
+/* 投稿0件のとき */
+.work__no-post,
+.team__no-post,
+.recruit__no-post {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.pagination__btn:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+a.pagination__btn {
+    text-decoration: none;
+}

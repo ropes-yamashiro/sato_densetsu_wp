@@ -142,7 +142,7 @@
     transform: translateX(-50%);
     width: 100%;
     height: clamp(26.5rem, 14.556rem + 56.21vw, 41.5rem);
-    background: url("/images/top/fv_deco-sp.png") center bottom / contain no-repeat;
+    background: url("../images/top/fv_deco-sp.png") center bottom / contain no-repeat;
     pointer-events: none;
     z-index: -1;
     visibility: hidden;
@@ -152,7 +152,7 @@
 @media (min-width: 768px) {
 
     .fv-deco {
-        background-image: url("/images/common/fv_deco-pc.png");
+        background-image: url("../images/common/fv_deco-pc.png");
         height: min(40.5208333333vw, 778px);
     }
 
@@ -184,7 +184,7 @@
     right: max(-20px, -5.3333333333vw);
     width: min(18.6666666667vw, 70px);
     height: min(63.2vw, 237px);
-    background: url("/images/top/about-deco.jpg") center / cover no-repeat;
+    background: url("../images/top/about-deco.jpg") center / cover no-repeat;
     pointer-events: none;
 }
 
@@ -316,7 +316,7 @@
     right: max(-20px, -5.3333333333vw);
     width: min(58.6666666667vw, 220px);
     height: min(26.6666666667vw, 100px);
-    background: url("/images/top/construction-img-deco.jpg") center / cover no-repeat;
+    background: url("../images/top/construction-img-deco.jpg") center / cover no-repeat;
     z-index: -1;
 }
 
@@ -349,7 +349,7 @@
         left: 0;
         width: min(5.7291666667vw, 110px);
         height: min(28.125vw, 540px);
-        background: url("/images/top/construction-deco.jpg") center / cover no-repeat;
+        background: url("../images/top/construction-deco.jpg") center / cover no-repeat;
         pointer-events: none;
     }
 
@@ -665,7 +665,7 @@
 ============================================ */
 
 .section_content--process {
-    background: url("/images/top/process-bg_sp.jpg") center / cover no-repeat;
+    background: url("../images/top/process-bg_sp.jpg") center / cover no-repeat;
     padding: min(13.3333333333vw, 50px) 0;
     overflow: visible;
 }
@@ -722,7 +722,7 @@
 
     .section_content--process {
         padding: min(5.2083333333vw, 100px) 0;
-        background-image: url("/images/top/process-bg_pc.jpg");
+        background-image: url("../images/top/process-bg_pc.jpg");
     }
 
     .section_content--process .c-title.is-white {
@@ -914,7 +914,7 @@
 
 .section_content--recruit {
     padding-block: min(10.6666666667vw, 40px);
-    background: url("/images/top/recruit-bg_sp.jpg") center / cover no-repeat;
+    background: url("../images/top/recruit-bg_sp.jpg") center / cover no-repeat;
 }
 
 .section_content--recruit .section_space {
@@ -978,7 +978,7 @@
 
     .section_content--recruit {
         padding: 0;
-        background-image: url("/images/top/recruit-bg_pc.jpg");
+        background-image: url("../images/top/recruit-bg_pc.jpg");
     }
 
     .section_content--recruit .c-title.is-white {

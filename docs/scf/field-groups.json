@@ -1,0 +1,246 @@
+[
+  {
+    "key": "group_sato_work",
+    "title": "施工実績",
+    "fields": [
+      {
+        "key": "field_work_period",
+        "label": "施工期間",
+        "name": "period",
+        "type": "text",
+        "instructions": "例）2026年4月〜2026年9月",
+        "required": 0
+      },
+      {
+        "key": "field_work_thumbnail",
+        "label": "サムネイル画像",
+        "name": "thumbnail",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "return_format": "id",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_work_content",
+        "label": "本文",
+        "name": "content",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "work"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+  },
+  {
+    "key": "group_sato_team",
+    "title": "社員紹介",
+    "fields": [
+      {
+        "key": "field_team_department",
+        "label": "配属部署名",
+        "name": "department",
+        "type": "text",
+        "instructions": "",
+        "required": 0
+      },
+      {
+        "key": "field_team_joined",
+        "label": "入社年",
+        "name": "joined",
+        "type": "text",
+        "instructions": "例）2000年入社",
+        "required": 0
+      },
+      {
+        "key": "field_team_thumbnail",
+        "label": "サムネイル画像",
+        "name": "thumbnail",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "return_format": "id",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_team_content",
+        "label": "本文",
+        "name": "content",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "team"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+  },
+  {
+    "key": "group_sato_recruit",
+    "title": "採用情報",
+    "fields": [
+      {
+        "key": "field_recruit_thumbnail",
+        "label": "サムネイル画像",
+        "name": "thumbnail",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "return_format": "id",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_recruit_summary",
+        "label": "一覧の紹介文",
+        "name": "summary",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 4,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_age",
+        "label": "年齢",
+        "name": "age",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_employment",
+        "label": "雇用形態",
+        "name": "employment",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_condition",
+        "label": "条件",
+        "name": "condition",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_holiday",
+        "label": "休日",
+        "name": "holiday",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_location",
+        "label": "勤務地",
+        "name": "location",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_hours",
+        "label": "勤務時間",
+        "name": "hours",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_salary",
+        "label": "給与",
+        "name": "salary",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_benefits",
+        "label": "待遇",
+        "name": "benefits",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      },
+      {
+        "key": "field_recruit_apply",
+        "label": "応募方法",
+        "name": "apply",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "new_lines": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "recruit"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+  }
+]

@@ -156,7 +156,7 @@
     border-radius: 0 30px 0 0;
     min-height: 76px;
     padding: min(2.6666666667vw, 10px) min(5.3333333333vw, 20px);
-    background: url("/images/recruit/recruit-detail_title_bg-sp.jpg") center / cover no-repeat;
+    background: url("../images/recruit/recruit-detail_title_bg-sp.jpg") center / cover no-repeat;
     font-size: min(4.8vw, 1.125rem);
     font-weight: bold;
     color: #fff;
@@ -237,7 +237,7 @@
     }
 
     .recruit-detail__title {
-        background-image: url("/images/recruit/recruit-detail_title_bg-pc.jpg");
+        background-image: url("../images/recruit/recruit-detail_title_bg-pc.jpg");
         min-height: 244px;
         font-size: clamp(1.4063rem, 1.5625vw, 1.875rem);
         margin-bottom: min(4.1666666667vw, 80px);

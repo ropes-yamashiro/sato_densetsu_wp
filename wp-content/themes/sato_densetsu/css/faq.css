@@ -3,7 +3,7 @@
 ========================================= */
 
 body {
-    background: url("/images/common/bg_color_sp.jpg") center / auto repeat fixed;
+    background: url("../images/common/bg_color_sp.jpg") center / auto repeat fixed;
 }
 
 .l-page {
@@ -18,7 +18,7 @@ body {
 @media (min-width: 768px) {
 
     body {
-        background: url("/images/common/bg_color_pc.jpg") center / cover no-repeat fixed;
+        background: url("../images/common/bg_color_pc.jpg") center / cover no-repeat fixed;
     }
 
     .l-page {

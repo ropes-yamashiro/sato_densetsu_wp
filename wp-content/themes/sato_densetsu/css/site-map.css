@@ -3,7 +3,7 @@
 ========================================= */
 
 body {
-    background: url("/images/common/bg_color_sp.jpg") center top / 100% auto repeat-y fixed;
+    background: url("../images/common/bg_color_sp.jpg") center top / 100% auto repeat-y fixed;
 }
 
 .l-page {
@@ -18,7 +18,7 @@ body {
 @media (min-width: 768px) {
 
     body {
-        background-image: url("/images/common/bg_color_pc.jpg");
+        background-image: url("../images/common/bg_color_pc.jpg");
     }
 
     .l-page {
@@ -78,7 +78,7 @@ a.sitemap__link::after {
     display: block;
     width: min(1.6vw, 6px);
     height: min(3.2vw, 12px);
-    background: url("/images/common/cp_arrow-black.png") center / contain no-repeat;
+    background: url("../images/common/cp_arrow-black.png") center / contain no-repeat;
     flex-shrink: 0;
     margin-left: min(2.1333333333vw, 8px);
 }
@@ -111,7 +111,7 @@ a.sitemap__link::after {
     display: block;
     width: min(1.6vw, 6px);
     height: min(3.2vw, 12px);
-    background: url("/images/common/cp_arrow-black.png") center / contain no-repeat;
+    background: url("../images/common/cp_arrow-black.png") center / contain no-repeat;
     flex-shrink: 0;
     margin-left: min(2.1333333333vw, 8px);
     filter: brightness(0) saturate(100%) invert(35%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%);
