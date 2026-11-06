@@ -175,8 +175,10 @@ a.sitemap__link::after {
         transition: opacity 0.3s ease;
     }
 
-    a.sitemap__link:hover {
-        opacity: 0.7;
+    @media (hover: hover) {
+        a.sitemap__link:hover {
+            opacity: 0.7;
+        }
     }
 
     .sitemap__item--has-children>.sitemap__link {
@@ -201,8 +203,10 @@ a.sitemap__link::after {
         transition: opacity 0.3s ease;
     }
 
-    .sitemap__sub-link:hover {
-        opacity: 0.7;
+    @media (hover: hover) {
+        .sitemap__sub-link:hover {
+            opacity: 0.7;
+        }
     }
 
 }

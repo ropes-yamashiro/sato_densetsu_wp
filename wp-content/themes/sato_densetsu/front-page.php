@@ -41,7 +41,7 @@ get_header();
                             <p class="about__desc">
                                 私たちは、神戸を拠点に高圧受電設備から一般電線工事まで幅広く手掛ける電気工事のスペシャリストです。水道やガスと同じく、電気は止まって初めてそのありがたみに気づくもの。利用されるすべての方々の生活基盤を24時間支え続けることに、私たちは強い誇りを持っています。
                             </p>
-                            <a href="javascript:void(0);" class="c-btn">詳しく見る <img class="c-btn__arrow"
+                            <a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>" class="c-btn">詳しく見る <img class="c-btn__arrow"
                                     src="<?php echo get_template_directory_uri(); ?>/images/common/cp_arrow.png" alt="" aria-hidden="true"></a>
                         </div>
                         <!-- 写真 -->

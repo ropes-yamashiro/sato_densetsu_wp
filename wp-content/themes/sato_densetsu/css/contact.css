@@ -258,13 +258,17 @@ body {
         font-size: clamp(0.75rem, 0.8333333333vw, 1rem);
     }
 
-    .contact-form__submit:hover {
-        background: var(--dark-blue-color);
-        color: #fff;
+    @media (hover: hover) {
+        .contact-form__submit:hover {
+            background: var(--dark-blue-color);
+            color: #fff;
+        }
     }
 
-    .contact-form__submit:hover .contact-form__submit-arrow {
-        filter: brightness(0) invert(1);
+    @media (hover: hover) {
+        .contact-form__submit:hover .contact-form__submit-arrow {
+            filter: brightness(0) invert(1);
+        }
     }
 
     .contact-form__submit-arrow {
@@ -306,9 +310,11 @@ input.contact-form__submit {
     font-family: inherit;
 }
 
-input.contact-form__submit:hover {
-    background: var(--dark-blue-color);
-    color: #fff;
+@media (hover: hover) {
+    input.contact-form__submit:hover {
+        background: var(--dark-blue-color);
+        color: #fff;
+    }
 }
 
 .wpcf7-not-valid-tip {
@@ -399,11 +405,13 @@ button.wpcf7cp-cfm-submit-btn {
     color: #fff;
 }
 
-button.wpcf7cp-cfm-edit-btn:hover,
-button.wpcf7cp-cfm-submit-btn:hover {
-    background: var(--bright-blue-color);
-    border-color: var(--bright-blue-color);
-    color: #fff;
+@media (hover: hover) {
+    button.wpcf7cp-cfm-edit-btn:hover,
+    button.wpcf7cp-cfm-submit-btn:hover {
+        background: var(--bright-blue-color);
+        border-color: var(--bright-blue-color);
+        color: #fff;
+    }
 }
 
 /* 完了画面 */

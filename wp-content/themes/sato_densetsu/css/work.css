@@ -175,8 +175,10 @@
         max-width: none;
     }
 
-    .work-card__link:hover .work-card__img-wrap img {
-        transform: scale(1.05);
+    @media (hover: hover) {
+        .work-card__link:hover .work-card__img-wrap img {
+            transform: scale(1.05);
+        }
     }
 
     .work-card__badge {
@@ -421,14 +423,18 @@
         width: min(0.5208333333vw, 10px);
     }
 
-    .detail__back-link:hover {
-        background: #0054AC;
-        color: #fff;
-        border-color: #0054AC;
+    @media (hover: hover) {
+        .detail__back-link:hover {
+            background: #0054AC;
+            color: #fff;
+            border-color: #0054AC;
+        }
     }
 
-    .detail__back-link:hover .detail__back-arrow {
-        filter: brightness(0) invert(1);
+    @media (hover: hover) {
+        .detail__back-link:hover .detail__back-arrow {
+            filter: brightness(0) invert(1);
+        }
     }
 
 }

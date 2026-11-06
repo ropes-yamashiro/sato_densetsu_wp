@@ -546,14 +546,18 @@
         height: min(0.8333333333vw, 16px);
     }
 
-    .history__btn-prev:not(.swiper-button-disabled):hover,
-    .history__btn-next:not(.swiper-button-disabled):hover {
-        background: var(--dark-blue-color);
+    @media (hover: hover) {
+        .history__btn-prev:not(.swiper-button-disabled):hover,
+        .history__btn-next:not(.swiper-button-disabled):hover {
+            background: var(--dark-blue-color);
+        }
     }
 
-    .history__btn-prev:not(.swiper-button-disabled):hover::after,
-    .history__btn-next:not(.swiper-button-disabled):hover::after {
-        background-image: url("../images/common/cp_arrow.png");
+    @media (hover: hover) {
+        .history__btn-prev:not(.swiper-button-disabled):hover::after,
+        .history__btn-next:not(.swiper-button-disabled):hover::after {
+            background-image: url("../images/common/cp_arrow.png");
+        }
     }
 
     /* カード */

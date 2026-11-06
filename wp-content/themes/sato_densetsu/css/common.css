@@ -198,28 +198,36 @@ em {
     }
 
 
-    .c-btn:hover::before {
-        opacity: 1;
+    @media (hover: hover) {
+        .c-btn:hover::before {
+            opacity: 1;
+        }
     }
 
-    .c-btn:hover {
-        color: #fff;
+    @media (hover: hover) {
+        .c-btn:hover {
+            color: #fff;
+        }
     }
 
     .c-btn.is-white {
         transition: color 0.3s ease, border-color 0.3s ease;
     }
 
-    .c-btn.is-white:hover {
-        border-color: #fff;
+    @media (hover: hover) {
+        .c-btn.is-white:hover {
+            border-color: #fff;
+        }
     }
 
     .c-btn.is-white .c-btn__arrow {
         transition: filter 0.3s ease;
     }
 
-    .c-btn.is-white:hover .c-btn__arrow {
-        filter: brightness(0) invert(1);
+    @media (hover: hover) {
+        .c-btn.is-white:hover .c-btn__arrow {
+            filter: brightness(0) invert(1);
+        }
     }
 
 

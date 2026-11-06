@@ -99,8 +99,10 @@ html {
     background: var(--dark-blue-color);
 }
 
-.header__btn:hover {
-    opacity: 0.7;
+@media (hover: hover) {
+    .header__btn:hover {
+        opacity: 0.7;
+    }
 }
 
 .header__hamburger {
@@ -357,8 +359,10 @@ html {
         transition: color 0.2s;
     }
 
-    .header__nav-link:hover {
-        color: var(--dark-blue-color);
+    @media (hover: hover) {
+        .header__nav-link:hover {
+            color: var(--dark-blue-color);
+        }
     }
 
     .header__btns {
@@ -539,12 +543,16 @@ html {
     transition: border-color 0.3s ease;
 }
 
-.page-top:hover {
-    background: rgba(0, 84, 172, 0.55);
+@media (hover: hover) {
+    .page-top:hover {
+        background: rgba(0, 84, 172, 0.55);
+    }
 }
 
-.page-top:hover::after {
-    border-color: #fff;
+@media (hover: hover) {
+    .page-top:hover::after {
+        border-color: #fff;
+    }
 }
 
 @media (min-width: 768px) {
@@ -647,8 +655,10 @@ html {
         transition: opacity 0.2s;
     }
 
-    .footer__nav-link:hover {
-        opacity: 0.7;
+    @media (hover: hover) {
+        .footer__nav-link:hover {
+            opacity: 0.7;
+        }
     }
 
     .footer__copyright {

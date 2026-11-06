@@ -449,8 +449,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.work-card:hover .work-card__img {
-    transform: scale(1.05);
+@media (hover: hover) {
+    .work-card:hover .work-card__img {
+        transform: scale(1.05);
+    }
 }
 
 .work-card__body {
@@ -613,14 +615,18 @@
         transition: background 0.3s ease;
     }
 
-    .work__slider-wrap .swiper-button-prev:not(.swiper-button-disabled):hover,
-    .work__slider-wrap .swiper-button-next:not(.swiper-button-disabled):hover {
-        background: rgba(0, 84, 172, 0.55);
+    @media (hover: hover) {
+        .work__slider-wrap .swiper-button-prev:not(.swiper-button-disabled):hover,
+        .work__slider-wrap .swiper-button-next:not(.swiper-button-disabled):hover {
+            background: rgba(0, 84, 172, 0.55);
+        }
     }
 
-    .work__slider-wrap .swiper-button-prev:not(.swiper-button-disabled):hover::after,
-    .work__slider-wrap .swiper-button-next:not(.swiper-button-disabled):hover::after {
-        border-color: #fff;
+    @media (hover: hover) {
+        .work__slider-wrap .swiper-button-prev:not(.swiper-button-disabled):hover::after,
+        .work__slider-wrap .swiper-button-next:not(.swiper-button-disabled):hover::after {
+            border-color: #fff;
+        }
     }
 
     .work__slider-wrap .swiper-button-prev {

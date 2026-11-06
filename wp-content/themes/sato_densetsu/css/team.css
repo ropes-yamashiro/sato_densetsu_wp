@@ -153,8 +153,10 @@
         padding: min(1.0416666667vw, 20px) min(1.5625vw, 30px);
     }
 
-    .team-card__link:hover {
-        opacity: 0.7;
+    @media (hover: hover) {
+        .team-card__link:hover {
+            opacity: 0.7;
+        }
     }
 
     .team-card__img-wrap {
@@ -393,14 +395,18 @@
         width: min(0.5208333333vw, 10px);
     }
 
-    .detail__back-link:hover {
-        background: #0054AC;
-        color: #fff;
-        border-color: #0054AC;
+    @media (hover: hover) {
+        .detail__back-link:hover {
+            background: #0054AC;
+            color: #fff;
+            border-color: #0054AC;
+        }
     }
 
-    .detail__back-link:hover .detail__back-arrow {
-        filter: brightness(0) invert(1);
+    @media (hover: hover) {
+        .detail__back-link:hover .detail__back-arrow {
+            filter: brightness(0) invert(1);
+        }
     }
 
 }
