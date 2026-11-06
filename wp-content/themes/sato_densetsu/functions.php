@@ -141,45 +141,49 @@ function sato_image_id( $value ) {
 	return 0;
 }
 
+/** 画像未設定のときに表示する代替画像（テーマ内。images/ からの相対） */
+define( 'SATO_NOW_PRINTING', 'common/nowprinting_800_600.png' );
+
 /**
- * サムネイル出力: thumbnail → アイキャッチ → ダミー画像 の順
- *
- * @param string $dummy テーマ内ダミー画像（images/ からの相対）
+ * サムネイル出力: thumbnail → アイキャッチ → NOW PRINTING 画像 の順
+ * （SCFの画像が未設定、または添付ファイルが削除されていて出力できない場合も NOW PRINTING を出す）
  */
-function sato_the_thumbnail( $post_id, $dummy, $class = '', $alt = '', $size = 'large' ) {
+function sato_the_thumbnail( $post_id, $class = '', $alt = '', $size = 'large' ) {
 	$id = sato_image_id( sato_field( 'thumbnail', $post_id ) );
 	if ( ! $id && has_post_thumbnail( $post_id ) ) {
 		$id = get_post_thumbnail_id( $post_id );
 	}
 	$alt = $alt ? $alt : get_the_title( $post_id );
 	if ( $id ) {
-		echo wp_get_attachment_image( $id, $size, false, array(
+		$img = wp_get_attachment_image( $id, $size, false, array(
 			'class'   => $class,
 			'alt'     => $alt,
 			'loading' => 'lazy',
 		) );
-		return;
+		if ( $img ) {
+			echo $img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			return;
+		}
 	}
 	printf(
 		'<img src="%s" alt="%s"%s loading="lazy">',
-		esc_url( get_template_directory_uri() . '/images/' . $dummy ),
+		esc_url( get_template_directory_uri() . '/images/' . SATO_NOW_PRINTING ),
 		esc_attr( $alt ),
 		$class ? ' class="' . esc_attr( $class ) . '"' : ''
 	);
 }
 
 /**
- * 施工実績のカテゴリー名。複数チェックされている場合は「マンション・店舗」のように「・」でつなぐ
- * （ターム作成順＝term_id 昇順で並べる）
+ * 施工実績のカテゴリー名。複数チェックされている場合は「戸建て・マンション・店舗」のように「・」でつなぐ。
+ * 並び順は、管理画面「施工実績カテゴリー」で並び替えプラグイン（Intuitive Custom Post Order）により
+ * ドラッグした順（term_order）。プラグインがフロントの get_terms / get_the_terms を term_order 順にするので、
+ * ここでは並べ替えない（プラグイン無効時は WordPress 既定の名前順）。
  */
 function sato_work_category_name( $post_id ) {
 	$terms = get_the_terms( $post_id, 'work_category' );
 	if ( ! $terms || is_wp_error( $terms ) ) {
 		return '';
 	}
-	usort( $terms, function ( $a, $b ) {
-		return $a->term_id - $b->term_id;
-	} );
 	return implode( '・', wp_list_pluck( $terms, 'name' ) );
 }
 

@@ -45,7 +45,7 @@ get_header();
                         <li class="team-card">
                             <a href="<?php the_permalink(); ?>" class="team-card__link">
                                 <div class="team-card__img-wrap">
-                                    <?php sato_the_thumbnail( get_the_ID(), 'team/team-sample-img.jpg', 'team-card__img' ); ?>
+                                    <?php sato_the_thumbnail( get_the_ID(), 'team-card__img' ); ?>
                                 </div>
                                 <div class="team-card__body">
                                     <p class="team-card__name"><?php the_title(); ?></p>

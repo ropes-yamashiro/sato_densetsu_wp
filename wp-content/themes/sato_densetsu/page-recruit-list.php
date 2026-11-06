@@ -49,7 +49,7 @@ get_header();
                         <!-- ▽ ループ開始 ▽ -->
                         <li class="recruit-card">
                             <div class="recruit-card__img-wrap curtain-reveal">
-                                <?php sato_the_thumbnail( get_the_ID(), 'recruit/recruit-sample-img.png', 'recruit-card__img' ); ?>
+                                <?php sato_the_thumbnail( get_the_ID(), 'recruit-card__img' ); ?>
                             </div>
                             <div class="recruit-card__body fadeInUp">
                                 <h3 class="recruit-card__title"><?php the_title(); ?></h3>

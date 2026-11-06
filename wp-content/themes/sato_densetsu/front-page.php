@@ -110,7 +110,7 @@ get_header();
                                             <?php if ( sato_work_category_name( get_the_ID() ) ) : ?>
                                             <span class="work-card__badge"><?php echo esc_html( sato_work_category_name( get_the_ID() ) ); ?></span>
                                             <?php endif; ?>
-                                            <?php sato_the_thumbnail( get_the_ID(), 'top/work-sample-img.jpg', 'work-card__img' ); ?>
+                                            <?php sato_the_thumbnail( get_the_ID(), 'work-card__img' ); ?>
                                         </div>
                                         <div class="work-card__body">
                                             <h3 class="work-card__name"><?php the_title(); ?></h3>

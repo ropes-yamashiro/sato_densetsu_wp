@@ -46,7 +46,7 @@ get_header();
                         <li class="work-card">
                             <a href="<?php the_permalink(); ?>" class="work-card__link">
                                 <div class="work-card__img-wrap">
-                                    <?php sato_the_thumbnail( get_the_ID(), 'work/work-sample-img.jpg' ); ?>
+                                    <?php sato_the_thumbnail( get_the_ID() ); ?>
                                     <?php if ( sato_work_category_name( get_the_ID() ) ) : ?>
                                     <span class="work-card__badge"><?php echo esc_html( sato_work_category_name( get_the_ID() ) ); ?></span>
                                     <?php endif; ?>
