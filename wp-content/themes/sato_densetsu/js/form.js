@@ -20,6 +20,15 @@
       confirmBox.insertBefore(lead, confirmBox.firstChild);
     };
 
+    // 確認画面に表示しない項目（見出しテキストで判定。入力チェック・メール本文には影響しない）
+    const HIDE_ROWS = ["メールアドレス（確認）", "プライバシーポリシーに同意する"];
+    const trimRows = (confirmBox) => {
+      confirmBox.querySelectorAll("tr").forEach((tr) => {
+        const th = tr.querySelector("th");
+        if (th && HIDE_ROWS.indexOf(th.textContent.trim()) !== -1) tr.remove();
+      });
+    };
+
     // ---- 確認画面の表示に合わせて URL を /confirm/ に切り替える（Confirm Plus は同一ページ内で表示する） ----
     const isConfirmShown = () => {
       const box = document.querySelector("#wpcf7cpcnf");
@@ -66,7 +75,10 @@
 
     new MutationObserver(() => {
       const confirmBox = document.querySelector("#wpcf7cpcnf");
-      if (confirmBox) addLead(confirmBox);
+      if (confirmBox) {
+        addLead(confirmBox);
+        trimRows(confirmBox);
+      }
       syncUrl();
     }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["style", "class", "hidden"] });
 
