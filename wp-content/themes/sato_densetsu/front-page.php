@@ -72,7 +72,7 @@ get_header();
                             <p class="construction__desc">
                                 工場やビルに不可欠な高圧工事において、佐藤電設工業は機材・機械の手配から現場施工まで、すべて一貫したワンストップ対応が可能です。煩雑な調整を排除し、迅速かつ確実な電力インフラの構築をお約束します。
                             </p>
-                            <a href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>" class="c-btn">詳しく見る <img class="c-btn__arrow"
+                            <a href="<?php echo esc_url( home_url( '/construction/' ) ); ?>" class="c-btn">詳しく見る <img class="c-btn__arrow"
                                     src="<?php echo get_template_directory_uri(); ?>/images/common/cp_arrow.png" alt="" aria-hidden="true"></a>
                         </div>
                         <!-- 写真 -->
