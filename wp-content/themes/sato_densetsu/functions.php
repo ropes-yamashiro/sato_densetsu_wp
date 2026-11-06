@@ -204,6 +204,12 @@ function sato_pagination( $query ) {
 		return;
 	}
 	$current = max( 1, (int) get_query_var( 'paged' ), (int) get_query_var( 'page' ) );
+
+	// 表示するページ番号は最大5つ。現在のページを中央にし、先頭/末尾付近では端に寄せて常に5つ出す
+	$visible = 5;
+	$start   = max( 1, $current - (int) floor( $visible / 2 ) );
+	$end     = min( $total, $start + $visible - 1 );
+	$start   = max( 1, $end - $visible + 1 );
 	?>
 	<nav class="pagination" aria-label="ページネーション">
 		<?php if ( $current > 1 ) : ?>
@@ -212,7 +218,7 @@ function sato_pagination( $query ) {
 			<button type="button" class="pagination__btn pagination__btn--prev" aria-label="前のページ" disabled>前へ</button>
 		<?php endif; ?>
 		<ul class="pagination__list">
-			<?php for ( $i = 1; $i <= $total; $i++ ) : ?>
+			<?php for ( $i = $start; $i <= $end; $i++ ) : ?>
 				<li>
 					<?php if ( $i === $current ) : ?>
 						<span class="pagination__link is-current" aria-current="page"><?php echo (int) $i; ?></span>
