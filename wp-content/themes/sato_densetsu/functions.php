@@ -168,10 +168,19 @@ function sato_the_thumbnail( $post_id, $dummy, $class = '', $alt = '', $size = '
 	);
 }
 
-/** 施工実績のカテゴリー名（先頭のタームのみ） */
+/**
+ * 施工実績のカテゴリー名。複数チェックされている場合は「マンション・店舗」のように「・」でつなぐ
+ * （ターム作成順＝term_id 昇順で並べる）
+ */
 function sato_work_category_name( $post_id ) {
 	$terms = get_the_terms( $post_id, 'work_category' );
-	return ( $terms && ! is_wp_error( $terms ) ) ? $terms[0]->name : '';
+	if ( ! $terms || is_wp_error( $terms ) ) {
+		return '';
+	}
+	usort( $terms, function ( $a, $b ) {
+		return $a->term_id - $b->term_id;
+	} );
+	return implode( '・', wp_list_pluck( $terms, 'name' ) );
 }
 
 /** 本文WYSIWYGの最初の <p> を一定文字数で切り出す */

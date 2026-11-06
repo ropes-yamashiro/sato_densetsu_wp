@@ -2,7 +2,7 @@
 $recruit_query = new WP_Query( array(
 	'post_type'      => 'recruit',
 	'posts_per_page' => -1,
-	'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'ASC' ),
+	'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ), // 並び替えプラグイン（Intuitive Custom Post Order）の管理画面の並びと同じ
 	'post_status'    => 'publish',
 ) );
 get_header();
